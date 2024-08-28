@@ -1,0 +1,159 @@
+
+section {
+    background-color: black;
+    margin: 0;
+}
+
+.experience-div {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #FFEFCD;
+}
+
+.skill-h3 {
+    color: black;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+
+.skill-pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*
+.page {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    vertical-align: middle;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+*/
+
+.sign {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.sign:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sign:active {
+    color: gray;
+}
+
+.skill-container {
+    padding: 10px;
+    border: 3px solid rgba(255, 255, 255, 1);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: all 1s ease-out;
+}
+
+.progression-div {
+    height: 500px;
+    background-size: cover;
+}
+
+.timeline-line {
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    top: 50%;
+    left: 5%;
+    background-color: white;
+    border: 1px solid transparent;
+}
+
+.separator-line {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    height: 5px; /* Adjust the thickness of the line */
+    background: rgba(255, 255, 255, 0.1); /* Slightly visible white for the frosted effect */
+    backdrop-filter: blur(10px); /* Creates the glass-like blur effect */
+    border-radius: 5px; /* Rounded edges to enhance the glass effect */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Optional: adds a soft glow around the line */
+
+}
+
+.project-div {
+    width: 100%;
+}
+
+.project-overview {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-desc {
+    width: 30%;
+    color: gray;
+}
+
+.projects {
+    width: 60%;
+    display: grid;
+    gap: 15px 5px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+
+.moving-line {
+    width: 100px;
+    height: 2px;
+    /*background-color: white;*/
+    position: relative;
+    animation: moveLine 5s infinite linear;
+    /*animation: 3s infinite alternate slidein;*/
+    font-size: 50px;
+}
+
+@keyframes moveLine {
+    0% {
+        left: 0;
+        top: 0;
+        color: blue;
+    }
+    33% {
+        left: 33%;
+        top: 100%;
+        color: red;
+    }
+    67% {
+        left: 67%;
+        top: 0;
+        color: purple;
+    }
+    100% {
+        left: 100%;
+        top: 100%;
+        color: green;
+    }
+}
+
