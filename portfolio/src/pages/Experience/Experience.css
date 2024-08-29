@@ -1,0 +1,235 @@
+
+section {
+    background-color: black;
+    margin: 0;
+}
+
+.experience-div {
+    /*background-color: #FFFFE3;*/
+    /*background-color: #FFFFEE;*/
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 500px;
+}
+
+.skill-h3 {
+    /*color: black;*/
+    color: white;
+    margin: 0;
+    height: 10%;
+}
+
+h3 {
+    /*color: white;*/
+    color: black;
+    text-align: center;
+}
+
+
+.skill-pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*
+.page {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    vertical-align: middle;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+*/
+
+.sign {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.sign:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sign:active {
+    color: gray;
+}
+
+.skill-container {
+    padding: 10px;
+    border: 3px solid rgba(255, 255, 255, 1);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: all 1s ease-out;
+}
+
+.progression-div {
+    height: 500px;
+    background-size: cover;
+}
+
+.timeline-line {
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    top: 50%;
+    left: 5%;
+    background-color: white;
+    border: 1px solid transparent;
+}
+
+.separator-line {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    height: 5px; /* Adjust the thickness of the line */
+    background: rgba(255, 255, 255, 0.1); /* Slightly visible white for the frosted effect */
+    backdrop-filter: blur(10px); /* Creates the glass-like blur effect */
+    border-radius: 5px; /* Rounded edges to enhance the glass effect */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Optional: adds a soft glow around the line */
+
+}
+
+.project-div {
+    width: 100%;
+}
+
+.project-overview {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-desc {
+    width: 30%;
+    color: gray;
+}
+
+.projects {
+    width: 60%;
+    display: grid;
+    padding: 10px;
+    gap: 15px 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+
+.moving-line {
+    width: 100px;
+    height: 2px;
+    /*background-color: white;*/
+    position: relative;
+    animation: moveLine 5s infinite linear;
+    /*animation: 3s infinite alternate slidein;*/
+    font-size: 50px;
+}
+
+.new-skill-pages {
+    width: 90%;
+    margin: 0;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.new-skill-picture {
+    width: 33%; 
+    height: 100%;  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.new-skill-picture-displayed {
+    width: 80%;
+    height: 50%;
+    background-image: url("https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+}
+
+.new-skill-skills {
+    width: 67%;
+    height: 100%;
+}
+
+.skill-grid {
+    width: 100%;
+    height: 70%;
+    display: grid;
+    column-gap: 50px;
+    row-gap: 50px;   
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.skill-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.skill-page {
+    display: flex;
+    height: fit-content;
+    color: black;
+    width: 10px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.skill-page:hover {
+    cursor: pointer;
+}
+
+
+.skill-page p {
+    margin: 0;
+}
+
+.skill-page p:hover {
+    cursor: pointer;
+}
+
+@keyframes moveLine {
+    0% {
+        left: 0;
+        top: 0;
+        color: blue;
+    }
+    33% {
+        left: 33%;
+        top: 100%;
+        color: red;
+    }
+    67% {
+        left: 67%;
+        top: 0;
+        color: purple;
+    }
+    100% {
+        left: 100%;
+        top: 100%;
+        color: green;
+    }
+}
+
