@@ -45,6 +45,8 @@ input:focus {
 
 .contact-me {
     text-align: center;
+    color: white;
+    font-weight: 200;
 }
 
 .email-container, .text-container, .button-container, .subject-container {
