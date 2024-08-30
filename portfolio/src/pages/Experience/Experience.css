@@ -199,8 +199,8 @@ h3 {
 
 .skill-page:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
-
 
 .skill-page p {
     margin: 0;
@@ -208,6 +208,10 @@ h3 {
 
 .skill-page p:hover {
     cursor: pointer;
+}
+
+.project-div h3 {
+    color: white;
 }
 
 @keyframes moveLine {

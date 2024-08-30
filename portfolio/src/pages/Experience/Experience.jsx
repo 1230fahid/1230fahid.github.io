@@ -83,7 +83,7 @@ export default function Experience() {
     }
 
     for(let i = 0; i < totalPages; i++) {
-        pages.push(<div onClick={() => handlePageClick(i+1)} key={i+1} className="skill-page" style={ selectedPage == i+1 ? {color: 'gray'} : {color: 'white'} }><p>{i+1}</p></div>);
+        pages.push(<div onClick={() => handlePageClick(i+1)} key={i+1} className="skill-page" style={ selectedPage === i+1 ? {color: 'gray'} : {color: 'white'} }><p>{i+1}</p></div>);
     }
 
     const skillArray = [];
@@ -93,7 +93,7 @@ export default function Experience() {
     }
 
     const filteredSkillArray = skillArray.filter((page, idx) => 
-        selectedPage == (Math.floor(idx/6) + 1)
+        selectedPage === (Math.floor(idx/6) + 1)
     );
 
     return(
@@ -115,39 +115,13 @@ export default function Experience() {
                     </div>
                     <div className="new-skill-skills">
                         <div className="skill-grid">
-                            {/*
-                                <Skill name="Python" confidence={90}></Skill>
-                                <Skill name="C#" confidence={90}></Skill>
-                                <Skill name="Java" confidence={90}></Skill>
-                                <Skill name="HTML/CSS" confidence={85}></Skill>
-                                <Skill name="JavaScript" confidence={90}></Skill>
-                                <Skill name="React" confidence={40}></Skill>
-                            */}
                             {filteredSkillArray}
                         </div>
                         <div className="skill-pagination">
-                            {
-                                pages
-                            }
+                            {pages}
                         </div>
                     </div>
                 </div>
-                { /*
-                    <div className="skill-pages">
-                        <p id="less-than" className="sign">&lt;</p>
-                        <div className="skill-container">
-                            <Skill name="Python" confidence={90}></Skill>
-                            <Skill name="C#" confidence={90}></Skill>
-                            <Skill name="React" confidence={70}></Skill>
-                        </div>
-                        <div className="skill-container">
-                            <Skill name="Python" confidence={90}></Skill>
-                            <Skill name="C#" confidence={90}></Skill>
-                            <Skill name="React" confidence={70}></Skill>
-                        </div>
-                        <p id="greater-than" className="sign">&gt;</p>
-                    </div>
-                */}
             </div>
             <div className="project-div">
                 <h3>My Projects</h3>

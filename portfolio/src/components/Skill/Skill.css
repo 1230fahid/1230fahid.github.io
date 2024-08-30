@@ -76,28 +76,42 @@
 
 .percentage-displayer {
     position: relative;
+    color: black;
+    background-color: white;
+    width: fit-content;
     bottom: 28px;
-    right: 20%;
+    left: 75%;
+    /*
+    position: relative;
+    bottom: 28px;
+    right: 0%;
     width: 40px;
     height: 20px;
     margin: 0;
-    /*background-color: black;*/
     background-color: white;
-    /*color: black;*/
     color: white;
+    animation: percentage-displayer-animate 0.5s ease-in;
+    */
 }
 
 .percentage-displayer-triangle {
+    position: relative;
+    color: black;
+    top: 4px;
+    height: 0;
+    width: 0;
+    left: 50%;
+    border-top: 5px solid white;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    /*
     position: relative;
     width: 0;
     height: 0;
     bottom: 0px;
     left: 50%;
-    /*border-top: 5px solid black;*/
-    border-top: 5px solid white;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    background-color: black;
+    animation: percentage-displayer-animate-triangle 0.5s ease-in;
+    */
 }
 
 .percentage-displayer p {
@@ -108,3 +122,52 @@
     /*color: white;*/
     color: black;
 }
+
+.skill-bar-fill-animation {
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    animation: fill-animate 0.5s ease-in;
+}
+
+.new-skill-top {
+    width: 90%;
+    height: 30px;
+    padding: 5px 5px 0px 5px;
+}
+
+@keyframes fill-animate {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes percentage-displayer-animate {
+    0% {
+        background-color: black;
+    }
+    70% {
+        background-color: black;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes percentage-displayer-animate-triangle {
+    0% {
+        border-top: 5px solid black;
+    }
+    70% {
+        border-top: 5px solid black;
+    }
+    100% {
+        border-top: 5px solid white;
+    }
+}
+
