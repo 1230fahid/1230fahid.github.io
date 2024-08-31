@@ -1,6 +1,7 @@
 import "./Experience.css";
 import Skill from "../../components/Skill/Skill.jsx";
 import Project from "../../components/Project/Project.jsx";
+import TimeEntry from "../../components/TimeEntry/TimeEntry.jsx";
 import { useState } from 'react';
 
 export default function Experience() {
@@ -74,7 +75,62 @@ export default function Experience() {
         }
     ];
 
+    const projectList = [
+        {
+            name: "Attractions",
+            status: "Completed",
+            image: "",
+            description: "Simple Review CRUD Application to review favorite attractions",
+            link: "https://www.google.com/"
+        },
+        {
+            name: "Attractions",
+            status: "In Progress",
+            image: "",
+            description: "This is a sample description",
+            link: "https://www.google.com/"
+        },
+        {
+            name: "Attractions",
+            status: "Not Yet Started",
+            image: "",
+            description: "This is a sample description",
+            link: "https://www.google.com/"
+        },
+        {
+            name: "Attractions",
+            status: "Completed", 
+            image: "",
+            description: "This is a sample description",
+            link: "https://www.google.com/"
+        }
+    ];
+
+    const experienceList = [
+        {
+            imageAddress: "../../assets/images/drexel_logo.png",
+            startDate: "09/2019",
+            description: "Attended Drexel University from September 2019 to June 2024.",
+        },
+        {
+            imageAddress: "",
+            startDate: "",
+            description: "",
+        },
+        {
+            imageAddress: "",
+            startDate: "",
+            description: "",
+        },
+        {
+            imageAddress: "",
+            startDate: "",
+            description: "",
+        }
+    ]
+
     const [selectedPage, setSelectedPage] = useState(1);
+    const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
     const totalPages = Math.ceil(skillList.length/numberOfSkillsPerPage);
     const pages = [];
@@ -102,9 +158,8 @@ export default function Experience() {
                 <h3>My Timeline</h3>
                 {/*<div class="moving-line">....</div>*/}
                 <div className="timeline-line">
-                </div>
-                <div className="separator-line">   
-                </div>
+                    {experienceList.map((experience, index) => <TimeEntry className={index % 2 ? "odd" : "even"} {...experience} key={index} /> )}
+                </div>              
             </div>
             <div className="experience-div">
                 <h3 className="skill-h3">My Skills</h3>
@@ -130,14 +185,15 @@ export default function Experience() {
                         <p>Here are the projects I've worked on over the years, along the ones still in 
                             progress. Hoping to incorporate advanced machine learning models into more 
                             projects and build cooler things!</p>
-                        <h1>........</h1>
                     </div>
-                    <div className="projects">
-                        <Project name="Attractions" status="Completed" image="" description="Simple Review CRUD Application to review favorite attractions" link="https://www.google.com/"></Project>
-                        <Project name="Attractions" status="In Progress" image="" description="This is a sample description" link="https://www.google.com/"></Project>
-                        <Project name="Attractions" status="Not Yet Started" image="" description="This is a sample description" link="https://www.google.com/"></Project>
-                        <Project name="Attractions" status="Completed" image="" description="This is a sample description" link="https://www.google.com/"></Project>
-                    </div>
+                    <div className="projects-container">
+                        <div className="projects">
+                            <Project name="Attractions" status="Completed" image="" description="Simple Review CRUD Application to review favorite attractions" link="https://www.google.com/"></Project>
+                            <Project name="Attractions" status="In Progress" image="" description="This is a sample description" link="https://www.google.com/"></Project>
+                            <Project name="Attractions" status="Not Yet Started" image="" description="This is a sample description" link="https://www.google.com/"></Project>
+                            <Project name="Attractions" status="Completed" image="" description="This is a sample description" link="https://www.google.com/"></Project>
+                        </div>
+                    </div>    
                 </div>
             </div>
         </section>

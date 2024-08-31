@@ -1,0 +1,38 @@
+.time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.time-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    padding: 2px;
+    border: 1px solid white;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.time-line {
+    height: 120px;
+    width: 4px;
+    background-color: white;
+}
+
+.time-container.even .time-circle {
+    position: relative;
+    bottom: 215px;
+}
+
+.time-container.even .time-line {
+    position: relative;
+    bottom: 220px;
+}
+
+.time-container.odd {
+    transform: rotate(180deg);
+}
+
