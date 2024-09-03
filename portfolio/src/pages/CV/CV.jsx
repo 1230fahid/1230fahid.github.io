@@ -1,7 +1,14 @@
 import { useLocation } from "react-router-dom";
 
 export default function CV() {
-    let location = useLocation();
+    //let location = useLocation();
+    let location = {
+        hash: "DUMMY HASH",
+        pathname: "DUMMY PATHNAME",
+        search: "DUMMY SEARCH",
+        state: "DUMMY STATE",
+    };
+    
     let { hash, pathname, search, state } = location;
     let link = "https://drive.google.com/uc?export=view&id=1BxYggcOHRllNZQ8F8zyJR7p5Bu5KloNA"
     console.log(`hash is ${hash}`);

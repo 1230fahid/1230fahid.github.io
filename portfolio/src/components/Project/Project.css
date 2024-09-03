@@ -1,4 +1,4 @@
-/*
+/* First
 .project-container {
     width: 100%;
     height: 300px;
@@ -22,15 +22,15 @@
 }
 */
 
+/* Second
 .project-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 300px;
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(70, 70, 70, 0.5);
     color: white;
-    /*border: 1px solid rgb(55, 55, 55);*/
     box-sizing: border-box;
     box-shadow: 3px 5px 7px rgb(35, 35, 35);
     border-radius: 10px;
@@ -76,5 +76,93 @@
     width: 75%;
     height: 75%;
 }
+*/
 
 
+.project-container {
+    height: 75vh;
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid gray;
+    transition: all 1s ease-in-out;
+
+    /*Added for animation*/
+    position: absolute;
+}
+
+.project-container.display {
+    opacity: 0;
+}
+
+.project-container.display.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.project-container.display.active.previous {
+    transform: translateX(-100vw);
+    opacity: 0;
+}
+
+.project-container.display.active.next {
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+/*
+.project-container.display.active.next {
+    transform: translateX(0);
+}
+
+.project-container.display.active.previous {
+    transform: translateX(0);
+}
+*/
+
+.project-container.display.passive.next {
+    transform: translateX(-100vw);
+    opacity: 0;
+}
+
+.project-container.display.passive.previous {
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+
+.project-image {
+    height: 60%;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project-description-container {
+    background-color: rgba(128, 128, 128, 0.3);
+    border-top: 1px solid gray;
+    width: 100%;
+    height: 40%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.project-description {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 10px 10px 10px;
+    
+}
+
+.project-description > h3 {
+    color: white;
+}
+
+.project-description > h4 {
+    font-weight: 300;
+}
+
+.project-description > p {
+    color: white;
+}

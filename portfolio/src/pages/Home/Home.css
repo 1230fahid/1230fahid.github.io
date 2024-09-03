@@ -29,14 +29,6 @@
     margin: 0px;
 }
 
-.interests {
-    height: 60%;
-}
-
-.interests > p {
-    text-align: center;
-}
-
 .summary {
     height: 40%;
 }
@@ -51,6 +43,9 @@
 .summary > h4 {
     height: 15%;
     margin: 0px;
+    font-size: large;
+    font-weight: 300;
+    text-align: center;
 }
 
 .summary > div {
@@ -71,31 +66,35 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition: color 0.5s;
 }
 
 .summary-block:nth-of-type(1) {
-    border-color: red;
+    border-color: blue;
     color: gray;
+    cursor: pointer;
 }
 
 .summary-block:nth-of-type(2) {
-    border-color: blue;
+    border-color: red;
     color: gray;
+    cursor: pointer;
 }
 
 .summary-block:nth-of-type(3) {
     border-color: green;
     color: gray;
+    cursor: pointer;
 }
 
 .summary-block:nth-of-type(1):hover {
-    border-color: red;
-    color: red;
+    border-color: blue;
+    color: blue;
 }
 
 .summary-block:nth-of-type(2):hover {
-    border-color: blue;
-    color: blue;
+    border-color: red;
+    color: red;
 }
 
 .summary-block:nth-of-type(3):hover {
