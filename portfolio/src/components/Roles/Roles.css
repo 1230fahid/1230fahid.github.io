@@ -6,12 +6,14 @@
 }
 
 .interests > p {
+    height: 20%;
+    margin: 0;
+    font-size: 40px;
     text-align: center;
 }
 
 .roles-container {
     display: flex;
-    flex-direction: row;
     height: 80%;
     width: 100%;
 }
@@ -26,45 +28,43 @@
     height: 100%;
     width: 65%;
     display: flex;
-    flex-direction:row
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .role {
-    min-height: 20%;
+    opacity: 1;
+    height: 25%;
     width: 100%;
-    position: absolute;
-    opacity: 0;
     overflow: hidden;
-    transform: translateY(150px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    white-space: nowrap;
+    margin: 0;
+    font-size: 40px;
 }
 
 .role.active.dev {
-    opacity: 1;
-    transform: translateY(0);
     color: blue;
     border-right: 1px solid blue;
-    animation: typing 3.5s steps(30, end) infinite, blue-blinking .75s step-end infinite;
+    animation: role-typing 3.5s steps(30, end) infinite, blue-blinking .75s step-end infinite;
 }
 
 .role.active.res {
-    opacity: 1;
-    transform: translateY(50px);
     color: red;
     border-right: 1px solid red;
-    animation: typing 3.5s steps(30, end) infinite, red-blinking .75s step-end infinite;
+    animation: role-typing 3.5s steps(30, end) infinite, red-blinking .75s step-end infinite;
 }
 
 .role.active.std {
-    opacity: 1;
-    transform: translateY(100px);
     color: green;
     border-right: 1px solid green;
-    animation: typing 3.5s steps(30, end) infinite, green-blinking .75s step-end infinite;
+    animation: role-typing 3.5s steps(30, end) infinite, green-blinking .75s step-end infinite;
 }
 
-@keyframes typing {
+@keyframes role-typing {
     0% {
+        width: 0;
+    }
+    10% {
         width: 0;
     }
     45% {
@@ -73,7 +73,7 @@
     55% {
         width: 100%;
     }
-    80% {
+    90% {
         width: 0;
     }
     100% {
@@ -127,6 +127,153 @@
     }
     100% {
         border-right-color: green;
+    }
+}
+
+@media(width <= 1000px) {
+    .pre-roles {
+        width: 25%;
+    }
+    .roles {
+        width: 75%;
+    }
+    .role {
+        height: 20%;
+        max-width: 250px;
+        font-size: 30px;
+    }
+}
+
+@media(width <= 680px) {
+    .interests > p {
+        font-size: 30px;
+    }
+    .role {
+        font-size: 22px;
+    }
+}
+
+@media(width <= 600px) and (height <= 600px) {
+    .interests > p {
+        font-size: 25px;
+    }
+    .role {
+        font-size: 18px;
+        height: 30%;
+    }
+}
+
+@media(width <= 600px) and (height > 600px) {
+    .interests > p {
+        font-size: 25px;
+    }
+    .pre-roles {
+        width: 10%;
+    }
+    .roles {
+        width: 90%;
+    }
+    .role {
+        font-size: 20px;
+        height: 25%;
+    }
+}
+
+@media(width <= 460px) and (height <= 600px) {
+    .roles {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .interests > p {
+        font-size: 20px;
+    }
+    .role {
+        font-size: 14px;
+        height: 20%;
+    }
+    .pre-roles {
+        width: 20%;
+    }
+    .roles {
+        width: 80%;
+    }
+}
+
+@media(width <= 460px) and (height > 600px) {
+    .roles {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .interests > p {
+        font-size: 20px;
+    }
+    .role {
+        font-size: 17px;
+        height: 20%;
+    }
+    .pre-roles {
+        width: 10%;
+    }
+    .roles {
+        width: 90%;
+    }
+}
+
+@media(height <= 600px) and (width >= 750px) {
+    .role {
+        font-size: 30px;
+    }
+}
+
+@media(660px < width < 1000px) and (height <= 500px) {
+    .role {
+        font-size: 30px;
+        height: 30%;
+    }
+}
+
+@media(height >= 1000px) and (width >= 800px) {
+    .interests > p {
+        font-size: 50px;
+    }
+    .roles {
+        justify-content: flex-start;
+    }
+    .role {
+        font-size: 35px;
+    }
+    .pre-roles {
+        width: 10%;
+    }
+    .roles {
+        width: 90%;
+    }
+}
+
+
+@media(height >= 1000px) and (width >= 1000px) {
+    .interests > p {
+        font-size: 65px;
+    }
+    .role {
+        font-size: 60px;
+    }
+}
+
+@media(height >= 1000px) and (width >= 1080px) {
+    .interests > p {
+        font-size: 73px;
+    }
+    .pre-roles {
+        width: 25%;
+    }
+    .roles {
+        width: 75%;
+    }
+    .role {
+        font-size: 70px;
     }
 }
 

@@ -1,6 +1,7 @@
 .about-parent-container-div {
     width: 100%;
     background-color: rgb(0, 0, 0);
+    margin: 0 0 75px 0;
 }
 
 .about-h3 {
@@ -39,8 +40,8 @@
 }
 
 .aboutMe-picture-div > div {
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    height: 220px;
     background-image: url("../../assets/images/grad_pic.jpg");
     background-size: cover;
     border-radius: 100%;
@@ -53,4 +54,31 @@
     box-sizing: border-box;
     color: #f0f0f0;
     font-size: large;
+}
+
+@media(width <= 650px) {
+    .aboutMe-container-div {
+        width: 50%;
+    }
+    .aboutMe-picture-div > div {
+        width: 150px;
+        height: 150px;
+    }
+
+    .aboutMe-container-div > p {
+        font-size: 15px;
+    }
+
+    .about-h3 {
+        font-size: 15px;
+    }
+}
+
+@media(width <= 450px) and (height <= 600px) {
+    .aboutMe-container-div > p {
+        font-size: 10px;
+    }
+    .aboutMe-container-div {
+        width: 60%;
+    }
 }

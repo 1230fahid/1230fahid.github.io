@@ -12,21 +12,6 @@ import './App.css';
 
 function App() {
 
-  /*
-  const router = createBrowserRouter([
-    { path: "/", element: <Root/>, errorElement: <Error/>, children: [
-      { path: "/", element: <Home/> },
-      { path: "/experience", element: <Experience/> },
-      { path: "/curriculum-vitae", element: <CV/>},
-      { path: "/contact", element: <Contact/> }
-    ]}
-  ]);
-
-  return(
-    { <RouterProvider router={router}/> }
-  );
-  */
-
   return (
     <>
       <div className="app">
@@ -57,7 +42,6 @@ function App() {
           </div>
         </div>
         <div className="app-content">
-          {/*<Carousel/>*/}
           <Home/>
           <About/>
           <Experience/>

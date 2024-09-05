@@ -56,3 +56,29 @@
   text-decoration: none;
 }
 
+
+@media(height <= 400px) {
+  .app-navbar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .app-navbar ul li a {
+    font-size: small;
+  }
+}
+
+@media(width <= 400px) {
+  .app-navbar {
+    width: 90px;
+  }
+
+  .app-navbar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .app-navbar ul li a {
+    font-size: small;
+  }
+
+}
+

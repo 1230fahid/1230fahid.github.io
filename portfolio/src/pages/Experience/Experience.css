@@ -1,4 +1,8 @@
 
+.experience-section {
+    margin-bottom: 75px;
+}
+
 .line {
     color: white;
 }
@@ -40,7 +44,7 @@ section {
     justify-content: flex-start;
     align-items: center;
     height: 500px;
-    margin: 20px 0px;
+    margin: 75px 0px;
 }
 
 .skill-h3 {
@@ -273,3 +277,36 @@ h3 {
     */
 }
 
+@media(height <= 500px) {
+    .projects-desc > p {
+        font-size: small;
+    }
+}
+
+@media(width <= 475px) {
+    .skill-grid {
+        column-gap: 20px;
+        row-gap: 20px;   
+    }
+
+    .projects-div > h3 {
+        font-size: small;
+    }
+
+    .projects-desc > p {
+        font-size: x-small;
+    }
+
+    .skill-h3 {
+        font-size: small;
+    }
+
+    .skill-page {
+        font-size: small;
+    }
+
+    .new-skill-picture-displayed {
+        width: 80%;
+        height: 80%;
+    }
+}

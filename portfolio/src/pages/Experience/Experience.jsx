@@ -131,8 +131,6 @@ export default function Experience() {
 
     const [selectedPage, setSelectedPage] = useState(1);
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-    const [prevSelectedProjectIndex, setPrevSelectedProjectIndex] = useState(-1);
-    const [direction, setDirection] = useState();
 
     const totalPages = Math.ceil(skillList.length/numberOfSkillsPerPage);
     const pages = [];
@@ -163,27 +161,15 @@ export default function Experience() {
     );
 
     const handleNextProject = () => {
-        //setPrevSelectedProjectIndex(prevSelectedProjectIndex => selectedProjectIndex);
         setSelectedProjectIndex(prevSelectedProjectIndex => (prevSelectedProjectIndex + 1) % projectList.length );
-        //setDirection(prevValue => "next");
     }
 
     const handlePrevProject = () => {
-        //setPrevSelectedProjectIndex(prevSelectedProjectIndex => selectedProjectIndex);
         setSelectedProjectIndex(prevSelectedProjectIndex => (prevSelectedProjectIndex - 1) == -1 ? projectList.length - 1 : prevSelectedProjectIndex - 1);
-        //setDirection(prevValue => "previous");
     }
 
     return(
-        <section>
-            { /*
-                <div className="progression-div">
-                    <h3>My Timeline</h3>
-                    <div className="timeline-line">
-                        {experienceList.map((experience, index) => <TimeEntry className={index % 2 ? "odd" : "even"} {...experience} key={index} /> )}
-                    </div>              
-                </div>
-            */ }
+        <section className="experience-section">
             <div id="skills" className="experience-div">
                 <h3 className="skill-h3">My Skills</h3>
                 <div className="new-skill-pages">
@@ -216,9 +202,6 @@ export default function Experience() {
                             <Project className={selectedProjectIndex === 1 ? `display active` : (selectedProjectIndex === 2 ? `display active previous` : ( selectedProjectIndex === 0 ? "display active next" : "display") )} name="Attractions" status="In Progress" image="" description="This is a sample description" link="https://www.google.com/"></Project>
                             <Project className={selectedProjectIndex === 2 ? `display active` : (selectedProjectIndex === 3 ? `display active previous` : ( selectedProjectIndex === 1 ? "display active next" : "display") )} name="Attractions" status="Not Yet Started" image="" description="This is a sample description" link="https://www.google.com/"></Project>
                             <Project className={selectedProjectIndex === 3 ? `display active` : (selectedProjectIndex === 0 ? `display active previous` : ( selectedProjectIndex === 2 ? "display active next" : "display") )} name="Attractions" status="Completed" image="" description="This is a sample description" link="https://www.google.com/"></Project>
-                            { /*
-                                <Project className="current-project" {...projectList[selectedProjectIndex]} ></Project>
-                             */ }
                         </div>
                         <p onClick={handleNextProject}>{'>'}</p>
                     </div>    

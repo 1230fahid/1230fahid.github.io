@@ -24,11 +24,6 @@
     color: white;
 }
 
-.about p {
-    font-size: 40px;
-    margin: 0px;
-}
-
 .summary {
     height: 40%;
 }
@@ -124,5 +119,136 @@
     background-position: 50%;
 }
 
+@media(width <= 1150px) {
+    .picture {
+        width: 70%;
+    }
+}
+
+@media(850px < width <= 975px) {
+    .summary > p {
+        font-size: 12px;
+    }
+}
+
+@media(width <= 850px) {
+    .summary > p {
+        font-size: 12px;
+    }
+    .summary-block > p {
+        font-size: 15px;
+    }
+    .picture {
+        width: 80%;
+    }
+}
+
+@media(width <= 680px) {
+    .summary > h4 {
+        font-size: small;
+    }
+    .picture {
+        width: 90%;
+    }
+}
+
+@media(width <= 600px) {
+    .summary > p {
+        font-size: 10px;
+    }
+    .summary-block > p {
+        font-size: 12px;
+    }
+    .picture {
+        width: 80%;
+    }
+}
+
+@media(width <= 500px) {
+    .summary > p {
+        font-size: 8px;
+    }
+    .summary-block > p {
+        font-size: 9px;
+    }
+    .picture {
+        width: 80%;
+    }
+}
+
+@media(width <= 400px) {
+    .summary-block > p {
+        font-size: 7px;
+    }
+
+    .summary > h4 {
+        font-size: 10px;
+    }
+}
+
+@media(width <= 400px) and (height >= 800px) {
+    .summary-block {
+        height: 40%;
+    }
+}
+
+@media(height < 500px) {
+    .interests {
+        height: 40%;
+    }
+    .summary {
+        height: 60%;
+    }
+    .summary-block {
+        height: 60%;
+    }
+}
+
+@media(height >= 500px) {
+    .summary-block {
+        height: 55%;
+    }
+}
+
+@media(height >= 600px) {
+    .summary-block {
+        height: 60%;
+    }
+}
+
+@media(height >= 750px) {
+    .summary-block {
+        height: 40%;
+    }
+}
+
+@media(height >= 1000px) and (width >= 1000px) {
+    .summary > p {
+        font-size: 25px;
+        height: 55%;
+    }
+}
+
+@media(height >= 1000px) and (width >= 750px) {
+    .summary > p {
+        font-size: 20px;
+        height: 55%;
+    }
+}
+
+@media(height >= 750px) and (width >= 1000px) {
+    .summary > p {
+        font-size: 20px;
+        height: 55%;
+    }
+}
 
 
+@media(width <= 600px) and (height > 600px)  {
+    .aboutMe-container-div > p {
+        font-size: 10px;
+    }
+    .aboutMe-container-div {
+        width: 60%;
+    }
+}

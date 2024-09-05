@@ -15,6 +15,7 @@ export default function Home() {
                             algorithms and coding, with a focus on Software Development and Machine Learning! 
                             Not sure where life will take me, but right now I'm glad you're visiting my site!
                         </p>
+                        <br/>
                         <h4>Check out my:</h4>
                         <div>
                             <a href="#skills" className="summary-block">
@@ -23,7 +24,7 @@ export default function Home() {
                             <a href="#projects" className="summary-block">
                                 <p>Projects</p>
                             </a>
-                            <a href="#resume" className="summary-block">
+                            <a href="https://drive.google.com/file/d/1BxYggcOHRllNZQ8F8zyJR7p5Bu5KloNA/view?usp=sharing" className="summary-block" target="_blank">
                                 <p>Resume</p>
                             </a>
                             

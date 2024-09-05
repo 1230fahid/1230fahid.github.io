@@ -108,32 +108,28 @@ textarea {
     box-sizing: border-box;
 }
 
-/*
-.other-contact {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+@media(width <= 550px) {
+    .contact-me {
+        font-size: medium;
+    }
+
+    .name {
+        width: 40%;
+    }
+    
+    label {
+        font-size: small;
+    }
+
+    input {
+        padding: 5px;
+    }
+    
 }
 
-.other-contact-div {
-    width: 75%;
-    color: white;
+@media(height >= 650px) {
+    .text-area {
+        height: 45vh;
+    }   
 }
-
-.other-contact-link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-}
-
-.other-contact-link-svg {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-*/
