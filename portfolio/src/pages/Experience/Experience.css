@@ -266,21 +266,44 @@ h3 {
     position: relative;
     height: 80vh;
     overflow: hidden;
-
-    /* First 
-    display: grid;
-    padding: 20px;
-    gap: 50px 50px;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: 45% 45%;
-    box-sizing: border-box;
-    */
 }
+
 
 @media(height <= 500px) {
     .projects-desc > p {
         font-size: small;
     }
+}
+
+@media(width <= 600px) {
+    .new-skill-pages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-skill-picture {
+        width: 50%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-skill-picture-displayed {
+        width: 80%;
+        height: 90%;
+    }
+
+    .new-skill-skills {
+        width: 100%;
+        height: 70%;
+    }
+
+    .projects-desc {
+        width: 50%;
+    }    
+
 }
 
 @media(width <= 475px) {
@@ -310,3 +333,287 @@ h3 {
         height: 80%;
     }
 }
+
+@media(width <= 395px) {
+    .skill-grid {  
+        grid-template-columns: auto;
+    }
+}
+
+@media(width <= 350px) {
+    .projects-div > h3 {
+        font-size: x-small;
+    }    
+}
+
+
+/* PC below */
+
+@media(width >= 450px) and (width < 625px) and (200px <= height < 300px) {
+    .project-description > p {
+        font-size: 7px;
+    }
+
+    .project-description > h3 {
+        font-size: 8px;
+    }
+
+    .project-description > h4 {
+        font-size: 8px;
+    }
+}
+
+
+@media(width >= 450px) and (width < 625px) and (300px <= height < 400px) {
+    .project-description > p {
+        font-size: 7px;
+    }
+
+    .project-description > h3 {
+        font-size: 8px;
+    }
+
+    .project-description > h4 {
+        font-size: 8px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (400px <= height < 500px) {
+    .project-description > p {
+        font-size: 7px;
+    }
+
+    .project-description > h3 {
+        font-size: 8px;
+    }
+
+    .project-description > h4 {
+        font-size: 8px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (500px <= height < 625px) {
+    .project-description > p {
+        font-size: 11px;
+    }
+
+    .project-description > h3 {
+        font-size: 12px;
+    }
+
+    .project-description > h4 {
+        font-size: 12px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (625px <= height < 800px) {
+    .project-description > p {
+        font-size: 10px;
+    }
+
+    .project-description > h3 {
+        font-size: small;
+    }
+
+    .project-description > h4 {
+        font-size: small;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (height >= 800px) {
+    
+}
+
+
+
+/* mobile devices below */
+
+@media(width >= 300px) and (width < 450px) {
+    .projects-div > h3 {
+        width: 50%;
+        font-size: 18px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (200px <= height < 300px) {
+    .project-description > p {
+        font-size: 6px;
+    }
+
+    .project-description > h3 {
+        font-size: 7px;
+    }
+
+    .project-description > h4 {
+        font-size: 7px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (300px <= height < 400px) {
+    .project-description > p {
+        font-size: 7px;
+    }
+
+    .project-description > h3 {
+        font-size: 8px;
+    }
+
+    .project-description > h4 {
+        font-size: 8px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (400px <= height < 500px) {
+    .project-description > p {
+        font-size: 8px;
+    }
+
+    .project-description > h3 {
+        font-size: 9px;
+    }
+
+    .project-description > h4 {
+        font-size: 9px;
+    }
+
+    .projects-desc {
+        width: 60%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (500px <= height < 625px) {
+    .project-description > p {
+        font-size: 9px;
+    }
+
+    .project-description > h3 {
+        font-size: 10px;
+    }
+
+    .project-description > h4 {
+        font-size: 10px;
+    }
+
+    .projects-desc {
+        width: 60%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (625px <= height < 800px) {
+    .project-description > p {
+        font-size: 10px;
+    }
+
+    .project-description > h3 {
+        font-size: small;
+    }
+
+    .project-description > h4 {
+        font-size: small;
+    }
+
+    .projects-desc {
+        width: 70%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (800px <= height < 1000px) {
+    .project-description > p {
+        font-size: 12px;
+    }
+
+    .project-description > h3 {
+        font-size: small;
+    }
+
+    .project-description > h4 {
+        font-size: small;
+    }
+
+    .projects-desc {
+        width: 70%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (1000px <= height < 1200px) {
+    .project-description > p {
+        font-size: 14px;
+    }
+
+    .project-description > h3 {
+        font-size: medium;
+    }
+
+    .project-description > h4 {
+        font-size: medium;
+    }
+
+    .projects-desc {
+        width: 70%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (height >= 1200px) {
+    .project-description > p {
+        font-size: 16px;
+    }
+
+    .project-description > h3 {
+        font-size: medium;
+    }
+
+    .project-description > h4 {
+        font-size: medium;
+    }
+
+    .projects-desc {
+        width: 70%;
+    }
+}
+
+@media(width >= 200px) and (width < 300px) {
+    .projects-desc {
+        width: 90%;
+    }
+
+    .projects-div > h3 {
+        width: 70%;
+        font-size: 20px;
+    }
+}
+
+@media(height < 200px) {
+
+    .experience-div {
+        margin-bottom: -10px;
+    }
+
+}
+
+@media(width >= 150px) and (width < 200px) {
+    .projects-desc {
+        width: 90%;
+    }
+
+    .projects-div > h3 {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .skill-h3 {
+        width: 50%;
+    }
+}
+
+@media(width < 150px) {
+    .percentage-displayer {
+        width: 90px;
+        height: 15px;
+        margin-left: 5px;
+    }
+
+    .skill-h3 {
+        width: 70%;
+    }
+}
+

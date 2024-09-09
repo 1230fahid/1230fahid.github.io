@@ -133,3 +133,13 @@ textarea {
         height: 45vh;
     }   
 }
+
+@media(width <= 300px) {
+    textarea, input, label {
+        font-size: 12px;
+    }
+
+    .contact-me {
+        font-size: 15px;
+    }
+}

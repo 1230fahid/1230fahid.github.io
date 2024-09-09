@@ -119,136 +119,1270 @@
     background-position: 50%;
 }
 
-@media(width <= 1150px) {
+@media(width >= 1200px) and (height < 250px) {
+    .summary > h4, .summary > br, .summary > p {
+        display: none;
+    }
+    .summary-block {
+        display: none;
+    }
+}
+
+@media(width >= 1200px) and (250px <= height < 300px) {
+    .summary-block > p {
+        font-size: 16px;
+    }
+
+    .summary > p {
+        font-size: 15px;
+    }
+
+    .summary > h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
+
+@media(width >= 1200px) and (300px <= height < 400px) {
+    .summary-block > p {
+        font-size: 19px;
+    }
+
+    .summary > p {
+        font-size: 17px;
+    }
+
+    .summary > h4 {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+}
+
+@media(width >= 1200px) and (550px <= height < 700px) {
+    .summary-block > p {
+        font-size: 22px;
+    }
+
+    .summary > p {
+        font-size: 19px;
+    }
+
+    .summary > h4 {
+        font-size: 24px;
+    }
+}
+
+@media(width >= 1200px) and (700px <= height < 900px) {
+    .summary-block > p {
+        font-size: 25px;
+    }
+
+    .summary > p {
+        font-size: 22px;
+    }
+
+    .summary > h4 {
+        font-size: 27px;
+    }
+}
+
+@media(width >= 1200px) and (900px <= height < 1200px) {
+    .summary-block > p {
+        font-size: 25px;
+    }
+
+    .summary > p {
+        font-size: 25px;
+    }
+
+    .summary > h4 {
+        font-size: 30px;
+    }
+
+}
+
+@media(width >= 1200px) and (height >= 1200px) {
+    .summary-block > p {
+        font-size: 25px;
+    }
+
+    .summary > p {
+        font-size: 25px;
+    }
+
+    .summary > h4 {
+        font-size: 34px;
+    }
+}
+
+@media(width >= 825px) and (width < 1200px) and (200px <= height < 300px) {
+    .summary > h4 {
+        margin-bottom: 20px;
+    }
+}
+
+@media(width >= 825px) and (width < 1200px) and (300px <= height < 400px) {
+    .summary > h4 {
+        margin-bottom: 20px;
+    }
+}
+
+@media(width >= 825px) and (width < 1200px) and (400px <= height < 500px) {
+    .summary > h4 {
+        margin-bottom: 20px;
+    }
+}
+
+@media(width >= 825px) and (width < 1200px) and (500px <= height < 625px) {
+    .summary > h4 {
+        margin-bottom: 24px;
+    }
+
+    .summary > p {
+        font-size: 17px;
+    }
+}
+
+@media(width >= 825px) and (width < 1200px) and (625px <= height < 800px) {
+    .summary > h4 {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .summary > p {
+        font-size: 20px;
+    }
+}
+
+@media(width >= 825px) and (width < 1200px) and (800px <= height < 1000px) {
+    .summary > p {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    .summary > h4 {
+        font-size: 22px;
+    }
+
+}
+
+@media(width >= 825px) and (width < 1200px) and (1000px <= height < 1200px) {
+    .summary > p {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+    .summary > h4 {
+        font-size: 27px;
+    }
+
+    .summary-block {
+        height: 80px;
+    }
+}
+
+
+
+@media(width >= 825px) and (width < 1200px) and (height >= 1200px) {
+    .summary > p {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+    .summary > h4 {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+
+    .summary-block {
+        height: 80px;
+    }
+}
+
+
+
+@media(width >= 600px) and (width < 800px) {
+    .about {
+        width: 55%;
+    }
+
+    .profile {
+        width: 45%;
+    }
+
+    .picture {
+        width: 75%;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (200px <= height < 300px) {
+    .summary > p {
+        font-size: 10px;
+    }
+
+    .summary > h4 {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .summary-block {
+        border-radius: 5px;
+        width: 20%;
+        height: 55%;
+        padding: 2px;
+    }
+
+    .summary-block > p {
+        font-size: small;
+    }
+
+}
+
+@media(width >= 625px) and (width < 825px) and (300px <= height < 400px) {
+    .summary > h4 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 13px;
+    }
+
+    .summary-block > p {
+        font-size: medium;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (400px <= height < 500px) {
+    .summary > h4 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 13px;
+    }
+
+    .summary-block > p {
+        font-size: medium;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (500px <= height < 625px) {
+    .summary > h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 15px;
+    }
+
+    .summary-block > p {
+        font-size: medium;
+    }
+
+}
+
+@media(width >= 625px) and (width < 825px) and (625px <= height < 800px) {
+    .summary > h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 15px;
+    }
+
+    .summary-block > p {
+        font-size: medium;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (800px <= height < 1000px) {
+    .summary > h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 18px;
+    }
+
+    .summary-block > p {
+        font-size: medium;
+    }
+
+    .profile {
+        justify-content: flex-end;
+    }
+
+    .picture {
+        width: 65%;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (1000px <= height < 1200px) {
+    .summary > h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 18px;
+    }
+
+    .summary-block > p {
+        font-size: medium;
+    }
+
+    .profile {
+        justify-content: flex-end;
+    }
+
+    .picture {
+        width: 65%;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (height >= 1200px) {
+    .summary > h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 18px;
+    }
+
+    .summary-block {
+        height: 100px;
+        width: 130px;
+    }
+
+    .summary-block > p {
+        font-size: medium;
+    }
+
+    .profile {
+        justify-content: flex-end;
+    }
+
+    .picture {
+        width: 65%;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (height >= 1200px) {
+    .summary > h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 18px;
+    }
+
+    .summary-block > p {
+        font-size: medium;
+    }
+
+    .about {
+        width: 60%;
+    }
+
+    .profile {
+        justify-content: flex-end;
+        width: 40%;
+    }
+
     .picture {
         width: 70%;
     }
 }
 
-@media(850px < width <= 975px) {
+
+@media(width >= 450px) and (width < 625px) and (200px <= height < 250px) {
+    .summary > h4 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
     .summary > p {
-        font-size: 12px;
+        font-size: 8px;
+        margin-bottom: 0;
+    }
+
+    .summary-block {
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
     }
 }
 
-@media(width <= 850px) {
+@media(width >= 450px) and (width < 625px) and (250px <= height < 300px) {
+    .summary > h4 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 8px;
+        margin-bottom: 0;
+    }
+
+    .summary-block {
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+    }
+}
+
+
+@media(width >= 450px) and (width < 625px) and (300px <= height < 400px) {
+    .summary > h4 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 8px;
+        margin-bottom: 0;
+    }
+
+    .summary-block {
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (400px <= height < 500px) {
+    .summary > h4 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+
+    .summary-block {
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (500px <= height < 800px) {
+    .summary > h4 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .summary > p {
+        font-size: 8px;
+        margin-bottom: 0;
+    }
+
+    .summary-block {
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+    }
+}
+
+@media(width >= 450px) and (width < 500px) and (625px <= height < 675px) {
+    .summary > p {
+        font-size: 11px;
+        margin-bottom: 0;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 12px;
+        margin: 5px 2px 5px 2px;
+    }
+}
+
+@media(width >= 500px) and (width < 625px) and (625px <= height < 675px) {
     .summary > p {
         font-size: 12px;
+        margin-bottom: 0;
     }
+
     .summary-block > p {
+        padding: 0;
+        font-size: 12px;
+        margin: 5px 2px 5px 2px;
+    }
+}
+
+@media(width >= 450px) and (width < 550px) and (675px <= height < 800px) {
+    .summary > p {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+    .summary > h4 {
         font-size: 15px;
     }
-    .picture {
-        width: 80%;
+
+    .summary-block {
+        height: 50%;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 12px;
+        margin: 5px 2px 5px 2px;
     }
 }
 
-@media(width <= 680px) {
+@media(width >= 550px) and (width < 625px) and (675px <= height < 800px) {
+    .summary > p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
     .summary > h4 {
-        font-size: small;
+        font-size: 15px;
     }
-    .picture {
-        width: 90%;
+
+    .summary-block {
+        height: 50%;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 12px;
+        margin: 5px 2px 5px 2px;
     }
 }
 
-@media(width <= 600px) {
+@media(width >= 450px) and (width < 500px) and (800px <= height < 875px) {
+    .summary > p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .summary > h4 {
+        font-size: 18px;
+    }
+
+    .summary-block {
+        height: 50%;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 13px;
+        margin: 5px 2px 5px 2px;
+    }
+
+    .profile {
+        justify-content: flex-end;
+    }
+
+    .picture {
+        width: 70%;
+    }
+}
+
+@media(width >= 500px) and (width < 550px) and (800px <= height < 875px) {
+    .summary > p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .summary > h4 {
+        font-size: 18px;
+    }
+
+    .summary-block {
+        height: 50%;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 13px;
+        margin: 5px 2px 5px 2px;
+    }
+
+    .profile {
+        justify-content: flex-end;
+    }
+
+    .picture {
+        width: 70%;
+    }
+}
+
+@media(width >= 550px) and (width < 625px) and (800px <= height < 875px) {
+    .summary > p {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .summary > h4 {
+        font-size: 18px;
+    }
+
+    .summary-block {
+        height: 50%;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 13px;
+        margin: 5px 2px 5px 2px;
+    }
+
+    .profile {
+        justify-content: flex-end;
+    }
+
+    .picture {
+        width: 70%;
+    }
+}
+
+@media(width >= 450px) and (width < 515px) and (875px <= height < 1000px) {
+    .summary > p {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .summary > h4 {
+        font-size: 18px;
+    }
+
+    .summary-block {
+        height: 50%;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 13px;
+        margin: 5px 2px 5px 2px;
+    }
+}
+
+@media(width >= 515px) and (width < 625px) and (875px <= height < 1000px) {
+    .summary > p {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .summary > h4 {
+        font-size: 18px;
+    }
+
+    .summary-block {
+        height: 50%;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 13px;
+        margin: 5px 2px 5px 2px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (1000px <= height < 1200px) {
+    .summary > p {
+        font-size: 19px;
+        margin-bottom: 20px;
+    }
+
+    .summary > h4 {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .summary-block {
+        height: 50%;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 13px;
+        margin: 5px 2px 5px 2px;
+    }
+
+    .about {
+        width: 60%;
+    }
+
+    .profile {
+        width: 40%;
+    }
+
+    .picture {
+        width: 150px;
+        height: 450px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (height >= 1200px) {
+
+    .summary > p {
+        font-size: 19px;
+        margin-bottom: 0;
+    }
+
+    .summary > h4 {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .summary-block {
+        height: 50%;
+    }
+
+    .summary-block > p {
+        padding: 0;
+        font-size: 13px;
+        margin: 5px 2px 5px 2px;
+    }
+
+    .about {
+        width: 60%;
+    }
+
+    .profile {
+        width: 40%;
+    }
+
+    .picture {
+        width: 150px;
+        height: 450px;
+    }
+
+}
+
+
+/* mobile devices below */
+
+@media(width >= 300px) and (width < 450px) and (150px <= height < 200px) {
+    .summary > p {
+        font-size: 10px;
+        margin-bottom: 30px;
+    }
+
+    .summary > h4 {
+        font-size: 12px;
+        margin-top: -60px;
+        margin-bottom: 5px;
+    }
+
+    .summary-block {
+        width: 32px;
+        height: 18px;
+        margin: 0px 10px;
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 7px;
+        padding: 3px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (200px <= height < 300px) {
+    .summary > p {
+        font-size: 10px;
+        margin-bottom: 30px;
+    }
+
+    .summary > h4 {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .summary-block {
+        width: 45px;
+        height: 25px;
+        margin: 0px 10px;
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+        padding: 5px;
+    }   
+}
+
+@media(width >= 300px) and (width < 450px) and (300px <= height < 400px) {
+    .summary > p {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+
+    .summary > h4 {
+        font-size: 12px;
+    }
+
+    .summary-block {
+        width: 45px;
+        height: 25px;
+        margin: 0px 10px;
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (400px <= height < 500px) {
+    .summary > p {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+
+    .summary > h4 {
+        font-size: 12px;
+    }
+
+    .summary-block {
+        width: 45px;
+        height: 25px;
+        margin: 0px 10px;
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (500px <= height < 625px) {
+    .summary > p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .summary > h4 {
+        font-size: 13px;
+    }
+
+    .summary-block {
+        width: 45px;
+        height: 25px;
+        margin: 0px 10px;
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (625px <= height < 800px) {
+    .summary > p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .summary > h4 {
+        font-size: 13px;
+    }
+
+    .summary-block {
+        width: 45px;
+        height: 25px;
+        margin: 0px 10px;
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .profile {
+        justify-content: flex-end;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (800px <= height < 1000px) {
+    .summary > p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .summary > h4 {
+        font-size: 13px;
+    }
+
+    .summary-block {
+        width: 45px;
+        height: 25px;
+        margin: 0px 10px;
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .profile {
+        justify-content: flex-end;
+    }
+    
+}
+
+@media(width >= 300px) and (width < 450px) and (1000px <= height < 1200px) {
+    .summary > p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .summary > h4 {
+        font-size: 20px;
+    }
+
+    .summary-block {
+        width: 50px;
+        height: 35px;
+        margin: 0px 10px;
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .profile {
+        justify-content: flex-end;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (height >= 1200px) {
+    
+    .about-me {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: 90vh;
+    }
+    
+    .profile {
+        width: 100%;
+        height: 20%;
+        justify-content: center;
+    }
+
+    .about {
+        width: 100%;
+        height: 75%;
+    }
+
+    .picture {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+    }
+
+    .summary > p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .summary > h4 {
+        font-size: 25px;
+    }
+
+    .summary-block {
+        width: 50px;
+        height: 35px;
+        margin: 0px 10px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .summary-block > p {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+}
+
+@media (200px <= width < 300px) {
+    .about {
+        width: 70%;
+    }
+
+    .profile {
+        width: 30%;
+    }
+
+    .picture {
+        width: 90px;
+        height: 90px;
+        border-radius: 100%;
+    }
+
+    .summary > h4 {
+        font-size: 15px;
+    }
+
     .summary > p {
         font-size: 10px;
     }
-    .summary-block > p {
-        font-size: 12px;
+
+    .summary-block {
+        width: 45px;
+        height: 20px;
+        margin: 0px 5px;
+        border-radius: 5px;
     }
-    .picture {
-        width: 80%;
+
+    .summary-block > p {
+        font-size: 10px;
+    }
+
+    .summary > div {
+        justify-content: flex-start;
+    }
+
+}
+
+@media(200px <= width < 300px) and (height < 245px) {
+    .summary > p {
+        margin-top: 20px;
+        font-size: 10px;
+        margin-bottom: 50px;
+    }
+
+    .summary > h4 {
+        margin-bottom: 30px;
+    }
+
+    .home-container {
+        margin-bottom: 100px;
     }
 }
 
-@media(width <= 500px) {
+@media(200px <= width < 300px) and (245px <= height < 325px) {
     .summary > p {
-        font-size: 8px;
+        font-size: 10px;
+        margin-bottom: 40px;
     }
+
+    .summary > h4 {
+        margin-bottom: 30px;
+    }
+
+    .home-container {
+        margin-bottom: 100px;
+    }
+}
+
+@media(200px <= width < 300px) and (325px <= height < 600px) {
+    .summary > p {
+        font-size: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+@media(200px <= width < 300px) and (height >= 600px) {
+    .summary > p {
+        font-size: 12px;
+    }
+}
+
+@media(150px <= width < 200px) {
+
+    .summary > p {
+        font-size: 6px;
+    }
+
+    .summary > h4 {
+        font-size: 10px;
+    }
+
     .summary-block > p {
         font-size: 9px;
     }
+
     .picture {
-        width: 80%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .summary-block {
+        width: 25px;
+        height: 25px;
+    }
+
+    .summary-block > p {
+        font-size: 5px;
+        border-radius: 1px;
     }
 }
 
-@media(width <= 400px) {
-    .summary-block > p {
+@media(100px <= width < 150px) {
+    .summary > p {
         font-size: 7px;
+        overflow: auto;
     }
 
     .summary > h4 {
         font-size: 10px;
+        margin-bottom: 20px;
     }
-}
 
-@media(width <= 400px) and (height >= 800px) {
+    .summary > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+    }
+
     .summary-block {
-        height: 40%;
+        width: 25px;
+        height: 25px;
+    }
+
+    .summary-block > p {
+        font-size: 5px;
+        border-radius: 1px;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .profile {
+        display: none;
     }
 }
 
-@media(height < 500px) {
-    .interests {
-        height: 40%;
+@media(width < 100px) {
+    .summary > p {
+        font-size: 7px;
+        overflow: auto;
     }
+
+    .summary > h4 {
+        font-size: 5px;
+        margin-bottom: 20px;
+        overflow: auto;
+    }
+
+    .summary > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+    }
+
+    .summary-block {
+        width: 15px;
+        height: 15px;
+    }
+
+    .summary-block > p {
+        font-size: 3px;
+        border-radius: 1px;
+        overflow: auto;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .profile {
+        display: none;
+    }
+}
+
+@media(150px <= height < 200px) {
     .summary {
-        height: 60%;
+        height: 90%;
     }
-    .summary-block {
-        height: 60%;
-    }
-}
 
-@media(height >= 500px) {
-    .summary-block {
-        height: 55%;
-    }
-}
-
-@media(height >= 600px) {
-    .summary-block {
-        height: 60%;
-    }
-}
-
-@media(height >= 750px) {
-    .summary-block {
-        height: 40%;
-    }
-}
-
-@media(height >= 1000px) and (width >= 1000px) {
     .summary > p {
-        font-size: 25px;
-        height: 55%;
+        font-size: 7px;
+        overflow: auto;
+        height: 100px;
+        margin-bottom: 0px;
     }
-}
 
-@media(height >= 1000px) and (width >= 750px) {
-    .summary > p {
-        font-size: 20px;
-        height: 55%;
-    }
-}
-
-@media(height >= 750px) and (width >= 1000px) {
-    .summary > p {
-        font-size: 20px;
-        height: 55%;
-    }
-}
-
-
-@media(width <= 600px) and (height > 600px)  {
-    .aboutMe-container-div > p {
+    .summary > h4 {
         font-size: 10px;
-    }
-    .aboutMe-container-div {
-        width: 60%;
+        margin-bottom: 5px;
+        margin-top: -80px;
     }
 }
+
+@media(150px <= height < 200px) and (150px <= width < 200px) {
+    .summary > p {
+        font-size: 7px;
+        overflow: auto;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+
+    .summary > div {
+        margin-top: -10px;
+    }
+
+}
+
+@media(height < 150px) {
+    .summary > h4, .summary > br {
+        display: none;
+    }
+    
+    .summary-block {
+        display: none;
+    }
+
+    .summary > p {
+        font-size: 7px;
+        overflow: auto;
+        height: 100px;
+    }
+}
+
+@media(width < 150px) and (150px <= height < 200px) {
+    .summary > p {
+        font-size: 7px;
+        overflow: auto;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+
+    .summary > div {
+        margin-top: -40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .summary > h4 {
+        margin-bottom: 10px;
+    }
+}
+

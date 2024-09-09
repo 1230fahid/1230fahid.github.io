@@ -19,3 +19,9 @@ code {
 #root {
   background-color: black;
 }
+
+@media(width <= 350px) {
+  body {
+    overflow-x: hidden;
+  }
+}

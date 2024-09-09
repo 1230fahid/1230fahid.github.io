@@ -57,28 +57,56 @@
 }
 
 @media(width <= 650px) {
-    .aboutMe-container-div {
-        width: 50%;
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .aboutMe-picture-div {
+        width: 100%;
+        height: 30%;
+    }
+
+    .aboutMe-container-div {
+        width: 100%;
+        height: 70%;
+    }
+
+    .about-h3 {
+        font-size: 15px;
+    }
+
     .aboutMe-picture-div > div {
         width: 150px;
         height: 150px;
     }
 
     .aboutMe-container-div > p {
+        width: 90%;
+        height: 100%;
         font-size: 15px;
     }
 
+}
+
+
+@media(width <= 475px) {
     .about-h3 {
-        font-size: 15px;
+        font-size: 13px;
+    }
+
+    .aboutMe-container-div > p {
+        font-size: 12px;
     }
 }
 
-@media(width <= 450px) and (height <= 600px) {
-    .aboutMe-container-div > p {
-        font-size: 10px;
+@media(width <= 275px) {
+    .about-h3 {
+        font-size: 11px;
     }
-    .aboutMe-container-div {
-        width: 60%;
+
+    .aboutMe-container-div > p {
+        font-size: 9px;
     }
 }

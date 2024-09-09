@@ -2,11 +2,38 @@ import "./Experience.css";
 import Skill from "../../components/Skill/Skill.jsx";
 import Project from "../../components/Project/Project.jsx";
 import TimeEntry from "../../components/TimeEntry/TimeEntry.jsx";
-import { useState } from 'react';
+import "../../components/Project/Project.css";
+import { useState, useEffect } from 'react';
+
 
 export default function Experience() {
     
-    const numberOfSkillsPerPage = 6;
+    const [dimensions, setDimensions] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+        numberOfSkillsPerPage: 6
+    });
+
+    useEffect(() => {
+        const handleResize = () => {
+            setDimensions(({ width, height, numberOfSkillsPerPage }) => {
+                let newNumberOfSkillsPerPage = window.innerWidth < 395 ? 3 : 6;
+                return {
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                    numberOfSkillsPerPage: newNumberOfSkillsPerPage,
+                };
+            });
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+
+    }, []);
+
     const skillList = 
     [
         {
@@ -78,61 +105,42 @@ export default function Experience() {
     const projectList = [
         {
             name: "Attractions",
-            status: "Completed",
+            status: "Broken",
             image: "",
-            description: "Simple Review CRUD Application to review favorite attractions",
-            link: "https://www.google.com/"
+            description: "A robust CRUD application that enables users to create and manage a personalized list of favorite world-renowned attractions, while also allowing them to share detailed reviews and insights about each destination, fostering a community of curious travelers and explorers",
+            siteLink: "https://www.google.com/",
+            sourceLink: "",
         },
         {
-            name: "Attractions",
+            name: "Game Exchange",
+            status: "Completed",
+            image: "../../assets/images/game_exchange.jpg",
+            description: "A dynamic e-commerce platform designed to offer users a seamless experience in browsing, selecting, and purchasing a curated collection of classic video games, complete with detailed product descriptions, user reviews, and secure checkout options",
+            siteLink: "https://www.google.com/",
+            sourceLink: "",
+        },
+        {
+            name: "Market Eye",
             status: "In Progress",
             image: "",
-            description: "This is a sample description",
-            link: "https://www.google.com/"
+            description: "A .NET full-stack application that allows users to view stocks from multiple indices and uses built-in Deep Learning models for accurate stock price forecasting and personalized investment recommendations",
+            siteLink: "https://www.google.com/",
+            sourceLink: "",
         },
         {
-            name: "Attractions",
-            status: "Not Yet Started",
+            name: "AlgoExecutor",
+            status: "In Progress", 
             image: "",
-            description: "This is a sample description",
-            link: "https://www.google.com/"
-        },
-        {
-            name: "Attractions",
-            status: "Completed", 
-            image: "",
-            description: "This is a sample description",
-            link: "https://www.google.com/"
+            description: "An Angular-based front-end application that enables users to visually explore and interact with popular Data Structures and Algorithms",
+            siteLink: "https://www.google.com/",
+            sourceLink: "",
         }
-    ];
-
-    const experienceList = [
-        {
-            imageAddress: "../../assets/images/drexel_logo.png",
-            startDate: "09/2019",
-            description: "Attended Drexel University from September 2019 to June 2024.",
-        },
-        {
-            imageAddress: "",
-            startDate: "",
-            description: "",
-        },
-        {
-            imageAddress: "",
-            startDate: "",
-            description: "",
-        },
-        {
-            imageAddress: "",
-            startDate: "",
-            description: "",
-        }
-    ]
+    ];     
 
     const [selectedPage, setSelectedPage] = useState(1);
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
-    const totalPages = Math.ceil(skillList.length/numberOfSkillsPerPage);
+    const totalPages = Math.ceil(skillList.length/dimensions.numberOfSkillsPerPage);
     const pages = [];
     
     const expDelay = async function(time) {
@@ -157,7 +165,7 @@ export default function Experience() {
     }
 
     const filteredSkillArray = skillArray.filter((page, idx) => 
-        selectedPage === (Math.floor(idx/6) + 1)
+        selectedPage === (Math.floor(idx/dimensions.numberOfSkillsPerPage) + 1)
     );
 
     const handleNextProject = () => {
@@ -167,6 +175,14 @@ export default function Experience() {
     const handlePrevProject = () => {
         setSelectedProjectIndex(prevSelectedProjectIndex => (prevSelectedProjectIndex - 1) == -1 ? projectList.length - 1 : prevSelectedProjectIndex - 1);
     }
+
+    let statusColors = {
+        "Completed": "green",
+        "In Progress": "orange",
+        "Not Yet Started": "white",
+        "Paused": "black",
+        "Broken": "red",
+    };
 
     return(
         <section className="experience-section">
@@ -198,10 +214,10 @@ export default function Experience() {
                     <div className="projects-container">
                         <p onClick={handlePrevProject}>{'<'}</p>
                         <div className="projects">
-                            <Project className={selectedProjectIndex === 0 ? `display active` : (selectedProjectIndex === 1 ? `display active previous` : ( selectedProjectIndex === 3 ? "display active next" : "display") )} name="Attractions" status="Completed" image="" description="Simple Review CRUD Application to review favorite attractions" link="https://www.google.com/"></Project>
-                            <Project className={selectedProjectIndex === 1 ? `display active` : (selectedProjectIndex === 2 ? `display active previous` : ( selectedProjectIndex === 0 ? "display active next" : "display") )} name="Attractions" status="In Progress" image="" description="This is a sample description" link="https://www.google.com/"></Project>
-                            <Project className={selectedProjectIndex === 2 ? `display active` : (selectedProjectIndex === 3 ? `display active previous` : ( selectedProjectIndex === 1 ? "display active next" : "display") )} name="Attractions" status="Not Yet Started" image="" description="This is a sample description" link="https://www.google.com/"></Project>
-                            <Project className={selectedProjectIndex === 3 ? `display active` : (selectedProjectIndex === 0 ? `display active previous` : ( selectedProjectIndex === 2 ? "display active next" : "display") )} name="Attractions" status="Completed" image="" description="This is a sample description" link="https://www.google.com/"></Project>
+                            <Project number="zero" className={selectedProjectIndex === 0 ? `display active` : (selectedProjectIndex === 1 ? `display active previous` : ( selectedProjectIndex === 3 ? "display active next" : "display") )} {...projectList[0]}></Project>
+                            <Project number="one" className={selectedProjectIndex === 1 ? `display active` : (selectedProjectIndex === 2 ? `display active previous` : ( selectedProjectIndex === 0 ? "display active next" : "display") )} {...projectList[1]}></Project>
+                            <Project number="two" className={selectedProjectIndex === 2 ? `display active` : (selectedProjectIndex === 3 ? `display active previous` : ( selectedProjectIndex === 1 ? "display active next" : "display") )} {...projectList[2]}></Project>
+                            <Project number="three" className={selectedProjectIndex === 3 ? `display active` : (selectedProjectIndex === 0 ? `display active previous` : ( selectedProjectIndex === 2 ? "display active next" : "display") )} {...projectList[3]}></Project>
                         </div>
                         <p onClick={handleNextProject}>{'>'}</p>
                     </div>    

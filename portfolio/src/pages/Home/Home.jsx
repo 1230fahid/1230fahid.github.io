@@ -13,7 +13,6 @@ export default function Home() {
                         <p>
                             I'm a 23 year old curious individual, who's curious about anything involving 
                             algorithms and coding, with a focus on Software Development and Machine Learning! 
-                            Not sure where life will take me, but right now I'm glad you're visiting my site!
                         </p>
                         <br/>
                         <h4>Check out my:</h4>

@@ -2,17 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black; /* Dark background for the logo */
+    background-color: black;
     width: 60px;
     height: 60px;
     border-radius: 3px;
-    border: 4px solid #f5f5dc; /* Border similar to the background */
+    border: 4px solid #f5f5dc;
 }
 
 .logo-frame {
     width: 48px;
     height: 48px;
-    background-color: black; /* Darker background inside the frame */
+    background-color: black;
     position: relative;
     display: flex;
     justify-content: center;
@@ -29,22 +29,11 @@
 }
 
 .letter {
-    font-family: 'Times New Roman', serif; /* Classic serif font */
+    font-family: 'Times New Roman', serif;
     font-size: 24px;
-    color: #f5f5dc; /* Light color for the letters */
+    color: #f5f5dc;
     font-weight: bold;
 }
-
-/*
-.logo-frame::before, .logo-frame::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background-color: #f5f5dc;
-    top: 0;
-}
-*/
 
 .logo-frame::before {
     left: 15%;
@@ -100,9 +89,158 @@
     }
     
     .letter {
-        font-family: 'Times New Roman', serif; /* Classic serif font */
+        font-family: 'Times New Roman', serif;
         font-size: 20px;
-        color: #f5f5dc; /* Light color for the letters */
+        color: #f5f5dc;
+        font-weight: bold;
+    }
+}
+
+
+@media(height <= 275px) {
+    .logo-container {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .logo-frame {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .letter {
+        font-family: 'Times New Roman', serif;
+        font-size: 16px;
+        color: #f5f5dc;
+        font-weight: bold;
+    }
+}
+
+
+/* mobile devices below */
+
+/*@media(width >= 300px) and (width < 450px) and (300px <= height < 400px) {*/
+@media(width >= 300px) and (width < 450px) {
+    .logo-container {
+        width: 34px;
+        height: 34px;
+    }
+    
+    .logo-frame {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .letter {
+        font-family: 'Times New Roman', serif;
+        font-size: 14px;
+        color: #f5f5dc;
+        font-weight: bold;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (height < 200px) {
+    .logo-container {
+        width: 19px;
+        height: 19px;
+    }
+    
+    .logo-frame {
+        width: 14px;
+        height: 14px;
+    }
+
+    .letter { 
+        font-size: 11px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (200px <= height < 300px) {
+    .logo-container {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .logo-frame {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media(width < 300px) {
+    .logo-container {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .logo-frame {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .letter {
+        font-family: 'Times New Roman', serif;
+        font-size: 12px;
+        color: #f5f5dc;
+        font-weight: bold;
+    }
+}
+
+@media(height < 200px) {
+    .logo-container {
+        width: 19px;
+        height: 19px;
+    }
+    
+    .logo-frame {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .letter {
+        font-family: 'Times New Roman', serif;
+        font-size: 6px;
+        color: #f5f5dc;
+        font-weight: bold;
+    }
+}
+
+@media(height < 150px) or (width < 235px) {
+    .logo-container {
+        width: 14px;
+        height: 14px;
+        border-width: 2px;
+    }
+    
+    .logo-frame {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .letter {
+        font-family: 'Times New Roman', serif;
+        font-size: 8px;
+        color: #f5f5dc;
+        font-weight: bold;
+    }
+}
+
+@media(height < 140px) or (width < 190px) {
+    .logo-container {
+        width: 11px;
+        height: 11px;
+        border-width: 1px;
+    }
+    
+    .logo-frame {
+        width: 7px;
+        height: 7px;
+    }
+    
+    .letter {
+        font-family: 'Times New Roman', serif;
+        font-size: 4px;
+        color: #f5f5dc;
         font-weight: bold;
     }
 }
