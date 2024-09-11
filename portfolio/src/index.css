@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -14,4 +18,10 @@ code {
 
 #root {
   background-color: black;
+}
+
+@media(width <= 350px) {
+  body {
+    overflow-x: hidden;
+  }
 }

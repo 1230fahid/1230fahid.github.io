@@ -1,11 +1,39 @@
 import "./Experience.css";
 import Skill from "../../components/Skill/Skill.jsx";
 import Project from "../../components/Project/Project.jsx";
-import { useState } from 'react';
+import TimeEntry from "../../components/TimeEntry/TimeEntry.jsx";
+import "../../components/Project/Project.css";
+import { useState, useEffect } from 'react';
+
 
 export default function Experience() {
     
-    const numberOfSkillsPerPage = 6;
+    const [dimensions, setDimensions] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+        numberOfSkillsPerPage: 6
+    });
+
+    useEffect(() => {
+        const handleResize = () => {
+            setDimensions(({ width, height, numberOfSkillsPerPage }) => {
+                let newNumberOfSkillsPerPage = window.innerWidth < 395 ? 3 : 6;
+                return {
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                    numberOfSkillsPerPage: newNumberOfSkillsPerPage,
+                };
+            });
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+
+    }, []);
+
     const skillList = 
     [
         {
@@ -74,16 +102,60 @@ export default function Experience() {
         }
     ];
 
-    const [selectedPage, setSelectedPage] = useState(1);
+    const projectList = [
+        {
+            name: "Attractions",
+            status: "Broken",
+            image: "",
+            description: "A robust CRUD application that enables users to create and manage a personalized list of favorite world-renowned attractions, while also allowing them to share detailed reviews and insights about each destination, fostering a community of curious travelers and explorers.",
+            siteLink: "",
+            sourceLink: "https://github.com/1230fahid/attractions",
+        },
+        {
+            name: "Game Exchange",
+            status: "Completed",
+            image: "../../assets/images/game_exchange.jpg",
+            description: "A dynamic e-commerce platform designed to offer users a seamless experience in browsing, selecting, and purchasing a curated collection of classic video games, complete with detailed product descriptions, user reviews, and secure checkout options.",
+            siteLink: "https://gameexchange.azurewebsites.net/",
+            sourceLink: "https://github.com/1230fahid/GameExchange",
+        },
+        {
+            name: "Market Eye",
+            status: "In Progress",
+            image: "",
+            description: "A .NET full-stack application that allows users to view stocks from multiple indices and uses built-in Deep Learning models for accurate stock price forecasting and personalized investment recommendations.",
+            siteLink: "",
+            sourceLink: "https://github.com/1230fahid/Market-Eye",
+        },
+        {
+            name: "AlgoExecutor",
+            status: "In Progress", 
+            image: "",
+            description: "An Angular-based front-end application that enables users to visually explore and interact with popular Data Structures and Algorithms.",
+            siteLink: "",
+            sourceLink: "https://github.com/1230fahid/algo-executor",
+        }
+    ];     
 
-    const totalPages = Math.ceil(skillList.length/numberOfSkillsPerPage);
+    const [selectedPage, setSelectedPage] = useState(1);
+    const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+
+    const totalPages = Math.ceil(skillList.length/dimensions.numberOfSkillsPerPage);
     const pages = [];
-    const handlePageClick = function (num) {
+    
+    const expDelay = async function(time) {
+        setTimeout(function () {
+
+        }, time);
+    }
+    
+    const handlePageClick = async function (num) {
+        await expDelay(750);
         setSelectedPage(prev => num);
     }
 
     for(let i = 0; i < totalPages; i++) {
-        pages.push(<div onClick={() => handlePageClick(i+1)} key={i+1} className="skill-page" style={ selectedPage == i+1 ? {color: 'gray'} : {color: 'white'} }><p>{i+1}</p></div>);
+        pages.push(<div onClick={() => handlePageClick(i+1)} key={i+1} className="skill-page" style={ selectedPage === i+1 ? {color: 'gray'} : {color: 'white'} }><p>{i+1}</p></div>);
     }
 
     const skillArray = [];
@@ -93,20 +165,28 @@ export default function Experience() {
     }
 
     const filteredSkillArray = skillArray.filter((page, idx) => 
-        selectedPage == (Math.floor(idx/6) + 1)
+        selectedPage === (Math.floor(idx/dimensions.numberOfSkillsPerPage) + 1)
     );
 
+    const handleNextProject = () => {
+        setSelectedProjectIndex(prevSelectedProjectIndex => (prevSelectedProjectIndex + 1) % projectList.length );
+    }
+
+    const handlePrevProject = () => {
+        setSelectedProjectIndex(prevSelectedProjectIndex => (prevSelectedProjectIndex - 1) == -1 ? projectList.length - 1 : prevSelectedProjectIndex - 1);
+    }
+
+    let statusColors = {
+        "Completed": "green",
+        "In Progress": "orange",
+        "Not Yet Started": "white",
+        "Paused": "black",
+        "Broken": "red",
+    };
+
     return(
-        <section>
-            <div className="progression-div">
-                <h3>My Timeline</h3>
-                {/*<div class="moving-line">....</div>*/}
-                <div className="timeline-line">
-                </div>
-                <div className="separator-line">   
-                </div>
-            </div>
-            <div className="experience-div">
+        <section className="experience-section">
+            <div id="skills" className="experience-div">
                 <h3 className="skill-h3">My Skills</h3>
                 <div className="new-skill-pages">
                     <div className="new-skill-picture">
@@ -115,55 +195,32 @@ export default function Experience() {
                     </div>
                     <div className="new-skill-skills">
                         <div className="skill-grid">
-                            {/*
-                                <Skill name="Python" confidence={90}></Skill>
-                                <Skill name="C#" confidence={90}></Skill>
-                                <Skill name="Java" confidence={90}></Skill>
-                                <Skill name="HTML/CSS" confidence={85}></Skill>
-                                <Skill name="JavaScript" confidence={90}></Skill>
-                                <Skill name="React" confidence={40}></Skill>
-                            */}
                             {filteredSkillArray}
                         </div>
                         <div className="skill-pagination">
-                            {
-                                pages
-                            }
+                            {pages}
                         </div>
                     </div>
                 </div>
-                { /*
-                    <div className="skill-pages">
-                        <p id="less-than" className="sign">&lt;</p>
-                        <div className="skill-container">
-                            <Skill name="Python" confidence={90}></Skill>
-                            <Skill name="C#" confidence={90}></Skill>
-                            <Skill name="React" confidence={70}></Skill>
-                        </div>
-                        <div className="skill-container">
-                            <Skill name="Python" confidence={90}></Skill>
-                            <Skill name="C#" confidence={90}></Skill>
-                            <Skill name="React" confidence={70}></Skill>
-                        </div>
-                        <p id="greater-than" className="sign">&gt;</p>
-                    </div>
-                */}
             </div>
-            <div className="project-div">
+            <div id="projects" className="projects-div">
                 <h3>My Projects</h3>
-                <div className="project-overview">
-                    <div className="project-desc">
+                <div className="projects-overview">
+                    <div className="projects-desc">
                         <p>Here are the projects I've worked on over the years, along the ones still in 
                             progress. Hoping to incorporate advanced machine learning models into more 
                             projects and build cooler things!</p>
-                        <h1>........</h1>
                     </div>
-                    <div className="projects">
-                        <Project name="Attractions" status="Completed" image="" description="Simple Review CRUD Application to review favorite attractions" link="https://www.google.com/"></Project>
-                        <Project name="Attractions" status="In Progress" image="" description="This is a sample description" link="https://www.google.com/"></Project>
-                        <Project name="Attractions" status="Not Yet Started" image="" description="This is a sample description" link="https://www.google.com/"></Project>
-                        <Project name="Attractions" status="Completed" image="" description="This is a sample description" link="https://www.google.com/"></Project>
-                    </div>
+                    <div className="projects-container">
+                        <p onClick={handlePrevProject}>{'<'}</p>
+                        <div className="projects">
+                            <Project number="zero" className={selectedProjectIndex === 0 ? `display active` : (selectedProjectIndex === 1 ? `display active previous` : ( selectedProjectIndex === 3 ? "display active next" : "display") )} {...projectList[0]}></Project>
+                            <Project number="one" className={selectedProjectIndex === 1 ? `display active` : (selectedProjectIndex === 2 ? `display active previous` : ( selectedProjectIndex === 0 ? "display active next" : "display") )} {...projectList[1]}></Project>
+                            <Project number="two" className={selectedProjectIndex === 2 ? `display active` : (selectedProjectIndex === 3 ? `display active previous` : ( selectedProjectIndex === 1 ? "display active next" : "display") )} {...projectList[2]}></Project>
+                            <Project number="three" className={selectedProjectIndex === 3 ? `display active` : (selectedProjectIndex === 0 ? `display active previous` : ( selectedProjectIndex === 2 ? "display active next" : "display") )} {...projectList[3]}></Project>
+                        </div>
+                        <p onClick={handleNextProject}>{'>'}</p>
+                    </div>    
                 </div>
             </div>
         </section>

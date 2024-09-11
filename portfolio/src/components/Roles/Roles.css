@@ -1,0 +1,1470 @@
+.interests {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interests > p {
+    height: 20%;
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.roles-container {
+    display: flex;
+    height: 80%;
+    width: 100%;
+}
+
+.pre-roles {
+    height: 100%;
+    width: 35%;
+}
+
+.roles {
+    position: relative;
+    height: 100%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.role {
+    opacity: 1;
+    height: 25%;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    font-size: 40px;
+}
+
+.role.active.dev {
+    color: blue;
+    border-right: 1px solid blue;
+    animation: role-typing 3.5s steps(30, end) infinite, blue-blinking .75s step-end infinite;
+}
+
+.role.active.res {
+    color: red;
+    border-right: 1px solid red;
+    animation: role-typing 3.5s steps(30, end) infinite, red-blinking .75s step-end infinite;
+}
+
+.role.active.std {
+    color: green;
+    border-right: 1px solid green;
+    animation: role-typing 3.5s steps(30, end) infinite, green-blinking .75s step-end infinite;
+}
+
+@keyframes role-typing {
+    0% {
+        width: 0;
+    }
+    10% {
+        width: 0;
+    }
+    45% {
+        width: 100%;
+    }
+    55% {
+        width: 100%;
+    }
+    90% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blue-blinking {
+    0% {
+        border-right-color: white;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+    100% {
+        border-right-color: white;
+    }
+}
+
+
+@keyframes blue-blinking {
+    0% {
+        border-right-color: blue;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+    100% {
+        border-right-color: blue;
+    }
+}
+
+@keyframes red-blinking {
+    0% {
+        border-right-color: red;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+    100% {
+        border-right-color: red;
+    }
+}
+
+@keyframes green-blinking {
+    0% {
+        border-right-color: green;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+    100% {
+        border-right-color: green;
+    }
+}
+
+@media(height < 200px) {
+    .roles-container {
+        display: none;
+    }
+
+    .interests {
+        height: 20%;
+    }
+}
+
+@media(width >= 1200px) and (200px <= height < 250px) {
+    .pre-roles {
+        width: 33%;
+    }
+
+    .roles {
+        width: 67%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 20px;
+    }
+}
+
+@media(width >= 1200px) and (250px <= height < 300px) {
+    .pre-roles {
+        width: 33%;
+    }
+
+    .roles {
+        width: 67%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 25px;
+    }
+}
+
+@media(width >= 1200px) and (300px <= height < 400px) {
+    .pre-roles {
+        width: 33%;
+    }
+
+    .roles {
+        width: 67%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 35px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 30px;
+    }
+}
+
+@media(width >= 1200px) and (400px <= height < 550px) {
+    .pre-roles {
+        width: 33%;
+    }
+
+    .roles {
+        width: 67%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 35px;
+    }
+}
+
+@media(width >= 1200px) and (height >= 1200px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 75px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 65px;
+    }
+}
+
+@media(width >= 1050px) and (height < 100px) {
+    .interests > p {
+        font-size: 13px;
+    }
+    .role {
+        height: 30%;
+        font-size: 6px;
+    }
+}
+
+@media(width >= 1050px) and (100px <= height < 150px) {
+    .interests > p {
+        font-size: 17px;
+    }
+    .role {
+        height: 30%;
+        font-size: 8px;
+    }
+}
+
+@media(width >= 1050px) and (150px <= height < 200px) {
+    .interests > p {
+        font-size: 22px;
+    }
+    .role {
+        height: 30%;
+        font-size: 13px;
+    }
+}
+
+@media(width >= 825px) and (width < 1050px) and (height < 100px) {
+    .interests > p {
+        font-size: 13px;
+    }
+    .role {
+        height: 30%;
+        font-size: 6px;
+    }
+}
+
+@media(width >= 825px) and (width < 1050px) and (100px <= height < 150px) {
+    .interests > p {
+        font-size: 17px;
+    }
+    .role {
+        height: 30%;
+        font-size: 8px;
+    }
+}
+
+@media(width >= 825px) and (width < 1050px) and (150px <= height < 200px) {
+    .interests > p {
+        font-size: 22px;
+    }
+    .role {
+        height: 30%;
+        font-size: 13px;
+    }
+}
+
+@media(width >= 825px) and (width < 915px) and (200px <= height < 300px) {
+    
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 22px;
+    }
+}
+
+@media(width >= 825px) and (width < 915px) and (300px <= height < 400px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 40px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 32px;
+    }
+}
+
+@media(width >= 825px) and (width < 915px) and (400px <= height < 500px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 53px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 45px;
+    }
+}
+
+@media(width >= 825px) and (width < 915px) and (400px <= height < 500px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 50px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 40px;
+    }
+}
+
+@media(width >= 825px) and (width < 915px) and (500px <= height < 600px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 50px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 40px;
+    }
+}
+
+@media(width >= 825px) and (width < 915px) and (600px <= height < 700px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 50px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 40px;
+    }
+}
+
+@media(width >= 825px) and (width < 915px) and (700px <= height < 800px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 52px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 43px;
+    }
+}
+
+@media(width >= 825px) and (width < 915px) and (800px <= height < 1200px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 53px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 47px;
+    }
+}
+
+@media(width >= 825px) and (width < 915px) and (height >= 1200px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 53px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 45px;
+    }
+}
+
+@media(width >= 915px) and (width < 1050px) and (200px <= height < 300px) {
+    
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 20px;
+    }
+}
+
+@media(width >= 915px) and (width < 1050px) and (300px <= height < 400px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 39px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 30px;
+    }
+}
+
+@media(width >= 915px) and (width < 1050px) and (400px <= height < 500px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 53px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 45px;
+    }
+}
+
+@media(width >= 915px) and (width < 1050px) and (400px <= height < 500px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 50px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 40px;
+    }
+}
+
+@media(width >= 915px) and (width < 1050px) and (500px <= height < 600px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 50px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 40px;
+    }
+}
+
+@media(width >= 915px) and (width < 1050px) and (600px <= height < 700px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 50px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 40px;
+    }
+}
+
+@media(width >= 915px) and (width < 1050px) and (700px <= height < 800px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 52px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 43px;
+    }
+}
+
+@media(width >= 915px) and (width < 1050px) and (800px <= height < 1200px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 53px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 47px;
+    }
+}
+
+@media(width >= 915px) and (width < 1050px) and (height >= 1200px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 60px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 55px;
+    }
+}
+
+@media(width >= 1050px) and (width < 1200px) and (200px <= height < 250px) {
+    .pre-roles {
+        width: 30%;
+    }
+
+    .roles {
+        width: 70%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 18px;
+    }
+}
+
+@media(width >= 1050px) and (width < 1200px) and (250px <= height < 300px) {
+    .pre-roles {
+        width: 30%;
+    }
+
+    .roles {
+        width: 70%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 28px;
+    }
+}
+
+@media(width >= 1050px) and (width < 1200px) and (300px <= height < 350px) {
+    .pre-roles {
+        width: 30%;
+    }
+
+    .roles {
+        width: 70%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 32px;
+    }
+}
+
+@media(width >= 1050px) and (width < 1200px) and (350px <= height < 500px) {
+    .pre-roles {
+        width: 30%;
+    }
+
+    .roles {
+        width: 70%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 50px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 40px;
+    }
+}
+
+@media(width >= 1050px) and (width < 1200px) and (500px <= height < 600px) {
+    .pre-roles {
+        width: 30%;
+    }
+
+    .roles {
+        width: 70%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 50px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 40px;
+    }
+}
+
+@media(width >= 1050px) and (width < 1200px) and (600px <= height < 700px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 50px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 40px;
+    }
+}
+
+@media(width >= 1050px) and (width < 1200px) and (700px <= height < 800px) {
+    .pre-roles {
+        width: 30%;
+    }
+
+    .roles {
+        width: 70%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 56px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 48px;
+    }
+}
+
+@media(width >= 1050px) and (width < 1200px) and (800px <= height < 1200px) {
+    .pre-roles {
+        width: 30%;
+    }
+
+    .roles {
+        width: 70%;
+    }
+
+    .interests > p {
+        width: 100%;
+        font-size: 56px;
+    }
+
+    .role {
+        height: 32%;
+        font-size: 48px;
+    }
+}
+
+@media(width >= 1050px) and (width < 1200px) and (height >= 1200px) {
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 70px;
+    }
+
+    .role {
+        height: 30%;
+        font-size: 61px;
+    }
+}
+
+@media(width >= 625px) and (width < 725px) {
+    .pre-roles {
+        width: 15%;
+    }
+
+    .roles {
+        width: 85%;
+    }
+}
+
+@media(width >= 725px) and (width < 825px) {
+    .pre-roles {
+        width: 18%;
+    }
+
+    .roles {
+        width: 82%;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (height < 100px) {
+    .interests > p {
+        font-size: 13px;
+    }
+    .role {
+        height: 30%;
+        font-size: 6px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (100px <= height < 150px) {
+    .interests > p {
+        font-size: 17px;
+    }
+    .role {
+        height: 30%;
+        font-size: 8px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (150px <= height < 200px) {
+    .interests > p {
+        font-size: 22px;
+    }
+    .role {
+        height: 30%;
+        font-size: 13px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (200px <= height < 300px) {
+    .interests > p {
+        font-size: 25px;
+    }
+    .role {
+        height: 30%;
+        font-size: 16px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (300px <= height < 400px) {
+    .interests > p {
+        font-size: 30px;
+    }
+    .role {
+        height: 30%;
+        font-size: 25px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (400px <= height < 500px) {
+    .interests > p {
+        font-size: 35px;
+    }
+    .role {
+        height: 30%;
+        font-size: 30px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (500px <= height < 625px) {
+    .interests > p {
+        font-size: 35px;
+    }
+    .role {
+        height: 31%;
+        font-size: 33px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (625px <= height < 800px) {
+    .interests > p {
+        font-size: 38px;
+    }
+    .role {
+        height: 30%;
+        font-size: 34px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (800px <= height < 1000px) {
+    .interests > p {
+        font-size: 38px;
+    }
+    .role {
+        height: 30%;
+        font-size: 34px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (1000px <= height < 1200px) {
+    .interests > p {
+        font-size: 38px;
+    }
+    .role {
+        height: 30%;
+        font-size: 34px;
+    }
+}
+
+@media(width >= 625px) and (width < 825px) and (height >= 1200px) {
+    .interests > p {
+        width: 300px;
+        font-size: 42px;
+    }
+    .role {
+        width: 300px;
+        height: 30%;
+        font-size: 38px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) {
+    .pre-roles {
+        width: 5%;
+    }
+
+    .roles {
+        width: 95%;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (height < 100px) {
+    .interests > p {
+        font-size: 13px;
+    }
+    .role {
+        height: 30%;
+        font-size: 6px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (100px <= height < 150px) {
+    .interests > p {
+        font-size: 17px;
+    }
+    .role {
+        height: 30%;
+        font-size: 8px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (150px <= height < 200px) {
+    .interests > p {
+        font-size: 22px;
+    }
+    .role {
+        height: 30%;
+        font-size: 13px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (200px <= height < 250px) {
+    .interests > p {
+        font-size: 25px;
+    }
+    .role {
+        height: 30%;
+        font-size: 15px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (250px <= height < 300px) {
+    .interests > p {
+        font-size: 25px;
+    }
+    .role {
+        height: 30%;
+        font-size: 20px;
+    }
+}
+
+@media(width >= 450px) and (width < 550px) and (300px <= height < 350px) {
+    .interests > p {
+        font-size: 27px;
+    }
+    .role {
+        height: 30%;
+        font-size: 22px;
+    }
+}
+
+@media(width >= 450px) and (width < 550px) and (350px <= height < 400px) {
+    .interests > p {
+        font-size: 27px;
+    }
+    .role {
+        height: 30%;
+        font-size: 25px;
+    }
+}
+
+@media(width >= 550px) and (width < 625px) and (300px <= height < 350px) {
+    .interests > p {
+        font-size: 27px;
+    }
+    .role {
+        height: 30%;
+        font-size: 25px;
+    }
+}
+
+@media(width >= 550px) and (width < 625px) and (350px <= height < 400px) {
+    .interests > p {
+        font-size: 28px;
+    }
+    .role {
+        height: 30%;
+        font-size: 24px;
+    }
+}
+
+
+@media(width >= 450px) and (width < 500px) and (400px <= height < 500px) {
+    .interests > p {
+        font-size: 25px;
+    }
+    .role {
+        height: 30%;
+        font-size: 24px;
+    }
+}
+
+
+@media(width >= 500px) and (width < 625px) and (400px <= height < 500px) {
+    .interests > p {
+        font-size: 28px;
+    }
+    .role {
+        height: 30%;
+        font-size: 24px;
+    }
+}
+
+@media(width >= 450px) and (width < 500px) and (500px <= height < 625px) {
+    .interests > p {
+        font-size: 26px;
+    }
+    .role {
+        height: 30%;
+        font-size: 25px;
+    }
+}
+
+@media(width >= 500px) and (width < 625px) and (500px <= height < 625px) {
+    .interests > p {
+        font-size: 32px;
+    }
+    .role {
+        height: 30%;
+        font-size: 30px;
+    }
+}
+
+@media(width >= 450px) and (width < 500px) and (625px <= height < 800px) {
+    .interests > p {
+        font-size: 26px;
+    }
+    .role {
+        height: 30%;
+        font-size: 25px;
+    }
+}
+
+@media(width >= 500px) and (width < 625px) and (625px <= height < 800px) {
+    .interests > p {
+        font-size: 32px;
+    }
+    .role {
+        height: 30%;
+        font-size: 30px;
+    }
+}
+
+@media(width >= 450px) and (width < 500px) and (800px <= height < 1000px) {
+    .roles {
+        display: column;
+        justify-content: center;
+    }
+    .role {
+        height: 20%;
+        font-size: 23px;
+    }
+}
+
+@media(width >= 500px) and (width < 550px) and (800px <= height < 1000px) {
+    .roles {
+        display: column;
+        justify-content: center;
+    }
+    .role {
+        height: 23%;
+        font-size: 25px;
+    }
+}
+
+@media(width >= 550px) and (width < 625px) and (800px <= height < 1000px) {
+    .roles {
+        display: column;
+        justify-content: center;
+    }
+    .role {
+        height: 24%;
+        font-size: 28px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (1000px <= height < 1200px) {
+    .roles {
+        display: column;
+        justify-content: center;
+    }
+    .role {
+        height: 24%;
+        font-size: 30px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (height >= 1200px) {
+    .roles {
+        display: column;
+        justify-content: center;
+    }
+    .role {
+        height: 24%;
+        font-size: 28px;
+    } 
+}
+
+
+/* mobile devices below */
+
+@media(width >= 300px) and (width < 450px) and (height < 150px) {
+    .interests > p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .role.active {
+        height: 31%;
+        font-size: 12px;
+    }
+
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (150px <= height < 200px) {
+    .interests > p {
+        font-size: 16px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (200px <= height < 300px) {
+    .interests > p {
+        font-size: 18px;
+    }
+
+    .role {
+        height: 31%;
+        font-size: 15px;
+    }
+
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (300px <= height < 400px) {
+    .interests > p {
+        font-size: 20px;
+    }
+
+    .role {
+        height: 31%;
+        font-size: 18px;
+    }
+
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (400px <= height < 500px) {
+    .interests > p {
+        font-size: 20px;
+    }
+
+    .role {
+        height: 31%;
+        font-size: 18px;
+    }
+
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (500px <= height < 625px) {
+    .interests > p {
+        font-size: 22px;
+    }
+
+    .role {
+        height: 31%;
+        font-size: 21px;
+    }
+
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (625px <= height < 800px) {
+    .interests > p {
+        font-size: 23px;
+    }
+
+    .role {
+        width: 150px;
+        height: 20%;
+        font-size: 22px;
+    }
+
+    .pre-roles {
+        width: 9%;
+    }
+
+    .roles {
+        width: 91%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (800px <= height < 1000px) {
+    .interests > p {
+        font-size: 27px;
+    }
+
+    .role {
+        width: 150px;
+        height: 20%;
+        font-size: 23px;
+    }
+
+    .pre-roles {
+        width: 5%;
+    }
+
+    .roles {
+        width: 95%;
+    }   
+}
+
+@media(width >= 300px) and (width < 450px) and (1000px <= height < 1200px) {
+    .interests > p {
+        font-size: 27px;
+    }
+
+    .role {
+        width: 150px;
+        height: 20%;
+        font-size: 23px;
+    }
+
+    .pre-roles {
+        width: 5%;
+    }
+
+    .roles {
+        width: 95%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (height >= 1200px) {
+    .interests > p {
+        width: 100%;
+        text-align: left;
+        font-size: 50px;
+    }
+
+    .pre-roles {
+        width: 5%;
+    }
+
+    .roles {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .role {
+        width: 100%;
+        height: 20%;
+        font-size: 40px;
+    }
+
+}
+
+@media(250px <= width < 300px) {
+    .interests > p {
+        font-size: 25px;
+    }
+
+    .pre-roles {
+        width: 15%;
+    }
+
+    .roles {
+        width: 85%;
+    }
+
+    .role {
+        font-size: 20px;
+    }
+}
+
+@media(210px <= width < 250px) {
+    .interests > p {
+        font-size: 20px;
+    }
+
+    .pre-roles {
+        width: 10%;
+    }
+
+    .roles {
+        width: 90%;
+    }
+
+    .role {
+        font-size: 15px;
+    }
+}
+
+@media(150px <= width < 210px) {
+    .interests > p {
+        font-size: 15px;
+    }
+
+    .pre-roles {
+        width: 5%;
+    }
+
+    .roles {
+        width: 95%;
+    }
+
+    .role {
+        font-size: 12px;
+    }
+}
+
+@media(width < 150px) {
+    .interests {
+        display: none;
+    }
+}
+
+
+@media(150px <= width < 210px) and (height < 200px) {
+    .interests > p {
+        font-size: 10px;
+    }
+}
+

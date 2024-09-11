@@ -1,29 +1,61 @@
 
+.experience-section {
+    margin-bottom: 75px;
+}
+
+.line {
+    color: white;
+}
+
+@keyframes moveLine {
+    0% {
+        left: 0;
+        top: 0;
+        color: blue;
+    }
+    33% {
+        left: 33%;
+        top: 100%;
+        color: red;
+    }
+    67% {
+        left: 67%;
+        top: 0;
+        color: purple;
+    }
+    100% {
+        left: 100%;
+        top: 100%;
+        color: green;
+    }
+}
+
+
+
 section {
     background-color: black;
     margin: 0;
 }
 
 .experience-div {
-    /*background-color: #FFFFE3;*/
-    /*background-color: #FFFFEE;*/
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     height: 500px;
+    margin: 75px 0px;
 }
 
 .skill-h3 {
-    /*color: black;*/
     color: white;
-    margin: 0;
-    height: 10%;
+    width: 25%;
+    font-weight: 200;
+    box-shadow: 1px 10px 10px blue;
+    border-radius: 100%;
 }
 
 h3 {
-    /*color: white;*/
     color: black;
     text-align: center;
 }
@@ -35,21 +67,6 @@ h3 {
     justify-content: space-around;
     align-items: center;
 }
-
-/*
-.page {
-    width: 22px;
-    height: 22px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    vertical-align: middle;
-    border: 1px solid white;
-    border-radius: 100%;
-}
-*/
 
 .sign {
     margin: 0;
@@ -93,54 +110,16 @@ h3 {
     left: 5%;
     background-color: white;
     border: 1px solid transparent;
-}
-
-.separator-line {
-    position: absolute;
-    top: 95%;
-    width: 100%;
-    height: 5px; /* Adjust the thickness of the line */
-    background: rgba(255, 255, 255, 0.1); /* Slightly visible white for the frosted effect */
-    backdrop-filter: blur(10px); /* Creates the glass-like blur effect */
-    border-radius: 5px; /* Rounded edges to enhance the glass effect */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Optional: adds a soft glow around the line */
-
-}
-
-.project-div {
-    width: 100%;
-}
-
-.project-overview {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
 }
-
-.project-desc {
-    width: 30%;
-    color: gray;
-}
-
-.projects {
-    width: 60%;
-    display: grid;
-    padding: 10px;
-    gap: 15px 5px;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-}
-
 
 .moving-line {
     width: 100px;
     height: 2px;
-    /*background-color: white;*/
     position: relative;
     animation: moveLine 5s infinite linear;
-    /*animation: 3s infinite alternate slidein;*/
     font-size: 50px;
 }
 
@@ -174,7 +153,7 @@ h3 {
 
 .skill-grid {
     width: 100%;
-    height: 70%;
+    height: 90%;
     display: grid;
     column-gap: 50px;
     row-gap: 50px;   
@@ -199,8 +178,8 @@ h3 {
 
 .skill-page:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
-
 
 .skill-page p {
     margin: 0;
@@ -210,26 +189,425 @@ h3 {
     cursor: pointer;
 }
 
-@keyframes moveLine {
-    0% {
-        left: 0;
-        top: 0;
-        color: blue;
-    }
-    33% {
-        left: 33%;
-        top: 100%;
-        color: red;
-    }
-    67% {
-        left: 67%;
-        top: 0;
-        color: purple;
-    }
-    100% {
-        left: 100%;
-        top: 100%;
-        color: green;
+/* Projects section below */
+
+.projects-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    margin: 20px 0;
+}
+
+.projects-div > h3 {
+    color: white;
+    font-weight: 200;
+    box-shadow: 1px 10px 10px red;
+    border-radius: 100%;
+    width: 25%;
+    margin-top: 0;
+}
+
+.projects-overview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-desc {
+    width: 30%;
+    color: gray;
+}
+
+.projects-desc > p {
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+
+.projects-container > p {
+    color: white;
+}
+
+.projects-container > p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: gray;
+}
+
+.projects {
+    width: 90%;
+    padding: 0% 5%;
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+
+@media(height <= 500px) {
+    .projects-desc > p {
+        font-size: small;
     }
 }
 
+@media(width <= 600px) {
+    .new-skill-pages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-skill-picture {
+        width: 50%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-skill-picture-displayed {
+        width: 80%;
+        height: 90%;
+    }
+
+    .new-skill-skills {
+        width: 100%;
+        height: 70%;
+    }
+
+    .projects-desc {
+        width: 50%;
+    }    
+
+}
+
+@media(width <= 475px) {
+    .skill-grid {
+        column-gap: 20px;
+        row-gap: 20px;   
+    }
+
+    .projects-div > h3 {
+        font-size: small;
+    }
+
+    .projects-desc > p {
+        font-size: x-small;
+    }
+
+    .skill-h3 {
+        font-size: small;
+    }
+
+    .skill-page {
+        font-size: small;
+    }
+
+    .new-skill-picture-displayed {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media(width <= 395px) {
+    .skill-grid {  
+        grid-template-columns: auto;
+    }
+}
+
+@media(width <= 350px) {
+    .projects-div > h3 {
+        font-size: x-small;
+    }    
+}
+
+
+/* PC below */
+
+@media(width >= 450px) and (width < 625px) and (200px <= height < 300px) {
+    .project-description > p {
+        font-size: 7px;
+    }
+
+    .project-description > h3 {
+        font-size: 8px;
+    }
+
+    .project-description > h4 {
+        font-size: 8px;
+    }
+}
+
+
+@media(width >= 450px) and (width < 625px) and (300px <= height < 400px) {
+    .project-description > p {
+        font-size: 7px;
+    }
+
+    .project-description > h3 {
+        font-size: 8px;
+    }
+
+    .project-description > h4 {
+        font-size: 8px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (400px <= height < 500px) {
+    .project-description > p {
+        font-size: 7px;
+    }
+
+    .project-description > h3 {
+        font-size: 8px;
+    }
+
+    .project-description > h4 {
+        font-size: 8px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (500px <= height < 625px) {
+    .project-description > p {
+        font-size: 11px;
+    }
+
+    .project-description > h3 {
+        font-size: 12px;
+    }
+
+    .project-description > h4 {
+        font-size: 12px;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (625px <= height < 800px) {
+    .project-description > p {
+        font-size: 10px;
+    }
+
+    .project-description > h3 {
+        font-size: small;
+    }
+
+    .project-description > h4 {
+        font-size: small;
+    }
+}
+
+@media(width >= 450px) and (width < 625px) and (height >= 800px) {
+    
+}
+
+
+
+/* mobile devices below */
+
+@media(width >= 300px) and (width < 450px) {
+    .projects-div > h3 {
+        width: 50%;
+        font-size: 18px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (200px <= height < 300px) {
+    .project-description > p {
+        font-size: 6px;
+    }
+
+    .project-description > h3 {
+        font-size: 7px;
+    }
+
+    .project-description > h4 {
+        font-size: 7px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (300px <= height < 400px) {
+    .project-description > p {
+        font-size: 7px;
+    }
+
+    .project-description > h3 {
+        font-size: 8px;
+    }
+
+    .project-description > h4 {
+        font-size: 8px;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (400px <= height < 500px) {
+    .project-description > p {
+        font-size: 8px;
+    }
+
+    .project-description > h3 {
+        font-size: 9px;
+    }
+
+    .project-description > h4 {
+        font-size: 9px;
+    }
+
+    .projects-desc {
+        width: 60%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (500px <= height < 625px) {
+    .project-description > p {
+        font-size: 9px;
+    }
+
+    .project-description > h3 {
+        font-size: 10px;
+    }
+
+    .project-description > h4 {
+        font-size: 10px;
+    }
+
+    .projects-desc {
+        width: 60%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (625px <= height < 800px) {
+    .project-description > p {
+        font-size: 10px;
+    }
+
+    .project-description > h3 {
+        font-size: small;
+    }
+
+    .project-description > h4 {
+        font-size: small;
+    }
+
+    .projects-desc {
+        width: 70%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (800px <= height < 1000px) {
+    .project-description > p {
+        font-size: 12px;
+    }
+
+    .project-description > h3 {
+        font-size: small;
+    }
+
+    .project-description > h4 {
+        font-size: small;
+    }
+
+    .projects-desc {
+        width: 70%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (1000px <= height < 1200px) {
+    .project-description > p {
+        font-size: 14px;
+    }
+
+    .project-description > h3 {
+        font-size: medium;
+    }
+
+    .project-description > h4 {
+        font-size: medium;
+    }
+
+    .projects-desc {
+        width: 70%;
+    }
+}
+
+@media(width >= 300px) and (width < 450px) and (height >= 1200px) {
+    .project-description > p {
+        font-size: 16px;
+    }
+
+    .project-description > h3 {
+        font-size: medium;
+    }
+
+    .project-description > h4 {
+        font-size: medium;
+    }
+
+    .projects-desc {
+        width: 70%;
+    }
+}
+
+@media(width >= 200px) and (width < 300px) {
+    .projects-desc {
+        width: 90%;
+    }
+
+    .projects-div > h3 {
+        width: 70%;
+        font-size: 20px;
+    }
+}
+
+@media(height < 200px) {
+
+    .experience-div {
+        margin-bottom: -10px;
+    }
+
+}
+
+@media(width >= 150px) and (width < 200px) {
+    .projects-desc {
+        width: 90%;
+    }
+
+    .projects-div > h3 {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .skill-h3 {
+        width: 50%;
+    }
+}
+
+@media(width < 150px) {
+    .percentage-displayer {
+        width: 90px;
+        height: 15px;
+        margin-left: 5px;
+    }
+
+    .skill-h3 {
+        width: 70%;
+    }
+}
+
+
+@media(width >= 800px) and (height >= 800px) {
+    .projects-desc {
+        width: 100%;
+    }
+
+    .projects-desc > p {
+        width: 100%;
+        font-size: 20px;
+    }
+}
