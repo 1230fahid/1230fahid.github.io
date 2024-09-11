@@ -501,6 +501,15 @@
     }
 }
 
+@media(width >= 450px) and (width < 625px) and (150px <= height < 200px) {
+    .summary-block {
+        border-radius: 5px;
+    }
+
+    .summary-block > p {
+        font-size: 10px;
+    }
+}
 
 @media(width >= 450px) and (width < 625px) and (200px <= height < 250px) {
     .summary > h4 {

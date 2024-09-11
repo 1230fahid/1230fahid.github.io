@@ -21,16 +21,20 @@ export default function({name, status, image, description, siteLink, sourceLink,
                         color: statusColors[status]
                     }}>{status}</h4>
                     <div className="link-container">
-                        <a href={siteLink} className="site" style={!siteLink ? {
-                            display: 'none',
-                        }: {}}>
-                            <p>Site</p>
-                        </a>
-                        <a href={sourceLink} className="code" style={!sourceLink ? {
-                            display: 'none',
-                        }: {}}>
-                            <p>Code</p>
-                        </a>
+                        {
+                            siteLink ? 
+                            <a href={siteLink} className="site">
+                                <p>Site</p>
+                            </a> :
+                            <></>
+                        }
+                        {
+                            sourceLink ?
+                            <a href={sourceLink} className="code" >
+                                <p>Code</p>
+                            </a> :
+                            <></>
+                        }
                     </div>
                 </div>
             </div>

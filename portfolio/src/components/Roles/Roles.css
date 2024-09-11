@@ -1213,8 +1213,6 @@
 
 /* mobile devices below */
 
-//300 to 450
-
 @media(width >= 300px) and (width < 450px) and (height < 150px) {
     .interests > p {
         width: 100%;

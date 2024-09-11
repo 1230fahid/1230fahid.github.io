@@ -119,7 +119,6 @@
 
 /* mobile devices below */
 
-/*@media(width >= 300px) and (width < 450px) and (300px <= height < 400px) {*/
 @media(width >= 300px) and (width < 450px) {
     .logo-container {
         width: 34px;

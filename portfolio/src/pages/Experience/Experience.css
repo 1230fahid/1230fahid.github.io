@@ -48,7 +48,6 @@ section {
 }
 
 .skill-h3 {
-    /*color: black;*/
     color: white;
     width: 25%;
     font-weight: 200;
@@ -57,7 +56,6 @@ section {
 }
 
 h3 {
-    /*color: white;*/
     color: black;
     text-align: center;
 }
@@ -117,26 +115,11 @@ h3 {
     justify-content: space-around;
 }
 
-/*
-.separator-line {
-    position: absolute;
-    top: 95%;
-    width: 100%;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); 
-    border-radius: 5px; 
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); 
-}
-*/
-
 .moving-line {
     width: 100px;
     height: 2px;
-    /*background-color: white;*/
     position: relative;
     animation: moveLine 5s infinite linear;
-    /*animation: 3s infinite alternate slidein;*/
     font-size: 50px;
 }
 
@@ -617,3 +600,14 @@ h3 {
     }
 }
 
+
+@media(width >= 800px) and (height >= 800px) {
+    .projects-desc {
+        width: 100%;
+    }
+
+    .projects-desc > p {
+        width: 100%;
+        font-size: 20px;
+    }
+}
