@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d3284e17.css",
+    "main.js": "/portfolio/static/js/main.5f2055ba.js",
+    "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/fahid_pic.png": "/portfolio/static/media/fahid_pic.d36a43f18d2eb6a60182.png",
+    "static/media/grad_pic.jpg": "/portfolio/static/media/grad_pic.781df4394db45c549b22.jpg",
+    "static/media/game_exchange.jpg": "/portfolio/static/media/game_exchange.f983b7c8a8e395d91dd0.jpg",
+    "static/media/algo_executor_home.jpg": "/portfolio/static/media/algo_executor_home.031c0850dc96ba511083.jpg",
+    "static/media/market_eye_home.jpg": "/portfolio/static/media/market_eye_home.f65097d56a360cd67bbb.jpg",
+    "static/media/under_construction_2.webp": "/portfolio/static/media/under_construction_2.400c89b12550893ff87c.webp",
+    "index.html": "/portfolio/index.html",
+    "main.d3284e17.css.map": "/portfolio/static/css/main.d3284e17.css.map",
+    "main.5f2055ba.js.map": "/portfolio/static/js/main.5f2055ba.js.map",
+    "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3284e17.css",
+    "static/js/main.5f2055ba.js"
+  ]
+}
