@@ -262,7 +262,6 @@
 }
 
 
-//will apply to < 200px
 @media(width >= 200px) and (width < 300px) {
   .app {
     display: flex;
