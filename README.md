@@ -1,4 +1,4 @@
 # portfolio
-Creating a personal website using ReactJS + Tailwind.
+Creating a personal website using HTML + CSS + JavaScript + ReactJS.
 
 
