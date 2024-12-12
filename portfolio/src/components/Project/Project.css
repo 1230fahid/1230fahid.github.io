@@ -9,21 +9,29 @@
 
 .project-container.display {
     opacity: 0;
+    z-index: 0;
+    //display: none;
 }
 
 .project-container.display.active {
     transform: translateX(0);
     opacity: 1;
+    z-index: 1;
+    //display: block;
 }
 
 .project-container.display.active.previous {
     transform: translateX(-100vw);
     opacity: 0;
+    z-index: 0;
+    //display: none;
 }
 
 .project-container.display.active.next {
     transform: translateX(100vw);
     opacity: 0;
+    z-index: 0;
+    //display: none;
 }
 
 .project-container.display.passive.next {
