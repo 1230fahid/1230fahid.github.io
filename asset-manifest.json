@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.0bfeefb6.css",
+    "main.css": "/static/css/main.99dbc65a.css",
     "main.js": "/static/js/main.cb46fe85.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/fahid_pic.png": "/static/media/fahid_pic.d36a43f18d2eb6a60182.png",
@@ -10,12 +10,12 @@
     "static/media/market_eye_home.jpg": "/static/media/market_eye_home.f65097d56a360cd67bbb.jpg",
     "static/media/under_construction_2.webp": "/static/media/under_construction_2.400c89b12550893ff87c.webp",
     "index.html": "/index.html",
-    "main.0bfeefb6.css.map": "/static/css/main.0bfeefb6.css.map",
+    "main.99dbc65a.css.map": "/static/css/main.99dbc65a.css.map",
     "main.cb46fe85.js.map": "/static/js/main.cb46fe85.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bfeefb6.css",
+    "static/css/main.99dbc65a.css",
     "static/js/main.cb46fe85.js"
   ]
 }
