@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.99dbc65a.css",
-    "main.js": "/static/js/main.cb46fe85.js",
-    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "main.css": "/static/css/main.6516cdea.css",
+    "main.js": "/static/js/main.6ba53f60.js",
+    "static/js/453.6264690d.chunk.js": "/static/js/453.6264690d.chunk.js",
     "static/media/fahid_pic.png": "/static/media/fahid_pic.d36a43f18d2eb6a60182.png",
-    "static/media/grad_pic.jpg": "/static/media/grad_pic.781df4394db45c549b22.jpg",
+    "static/media/profile.jpg": "/static/media/profile.781df4394db45c549b22.jpg",
     "static/media/game_exchange.jpg": "/static/media/game_exchange.f983b7c8a8e395d91dd0.jpg",
     "static/media/algo_executor_home.jpg": "/static/media/algo_executor_home.031c0850dc96ba511083.jpg",
     "static/media/market_eye_home.jpg": "/static/media/market_eye_home.f65097d56a360cd67bbb.jpg",
+    "static/media/smear.avif": "/static/media/smear.d923e6c539e816bdc55c.avif",
     "static/media/under_construction_2.webp": "/static/media/under_construction_2.400c89b12550893ff87c.webp",
     "index.html": "/index.html",
-    "main.99dbc65a.css.map": "/static/css/main.99dbc65a.css.map",
-    "main.cb46fe85.js.map": "/static/js/main.cb46fe85.js.map",
-    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+    "main.6516cdea.css.map": "/static/css/main.6516cdea.css.map",
+    "main.6ba53f60.js.map": "/static/js/main.6ba53f60.js.map",
+    "453.6264690d.chunk.js.map": "/static/js/453.6264690d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99dbc65a.css",
-    "static/js/main.cb46fe85.js"
+    "static/css/main.6516cdea.css",
+    "static/js/main.6ba53f60.js"
   ]
 }
